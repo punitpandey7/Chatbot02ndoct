@@ -78,6 +78,18 @@ def _build_model():
     return SentenceTransformer(EMBEDDING_MODEL)
 
 
+def is_ready() -> bool:
+    """True once the model is in memory and a query can be embedded.
+
+    Callers use this to avoid starting work that cannot finish in time: the
+    first load on a fresh container is dominated by importing
+    sentence_transformers, which is far slower than reading the weights
+    themselves, and a hosting proxy will drop the connection on a request
+    that runs too long.
+    """
+    return _model is not None
+
+
 def get_model():
     """Return the shared SentenceTransformer, loading it once.
 

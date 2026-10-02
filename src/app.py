@@ -29,7 +29,7 @@ if _PROJECT_ROOT not in sys.path:
 import streamlit as st
 
 from src.config import CHROMA_DIR, TOP_K
-from src.embed import get_model
+from src.embed import get_model, is_ready
 from src.generate import GenerationError
 from src.pipeline import DISCLAIMER, answer
 from src.store import collection_count
@@ -48,6 +48,16 @@ SCHEMES = [
     "HDFC Small Cap Fund",
     "HDFC Balanced Advantage Fund",
 ]
+
+# Turned instead of answering when the host cannot finish the lookup in time.
+NOT_READY_NOTICE = (
+    "Still getting ready. On a cold start this host needs about a minute "
+    "before the first answer can be looked up — please ask again in a moment."
+)
+GENERIC_ERROR = (
+    "Something went wrong while preparing that answer. "
+    "Please try again in a moment."
+)
 
 CSS = """
 <style>
@@ -283,26 +293,33 @@ def handle(question: str) -> None:
     with st.chat_message("user", avatar="🧑"):
         st.markdown(question)
     with st.chat_message("assistant", avatar="🏦"):
-        cold = _warm_thread is not None and _warm_thread.is_alive()
-        label = (
-            "Starting up — first answer loads the search model (~20 s)..."
-            if cold
-            else "Searching the corpus and writing a grounded answer..."
-        )
+        if not is_ready():
+            # Asking anyway would start a run that cannot finish: the first
+            # load is dominated by an import that takes longer than a hosting
+            # proxy will wait, and the browser would drop the connection and
+            # lose the question. Say so, and let them ask again.
+            st.session_state.messages.append(
+                {"role": "assistant", "notice": NOT_READY_NOTICE}
+            )
+            st.info(NOT_READY_NOTICE)
+            return
         try:
-            with st.spinner(label):
+            with st.spinner("Searching the corpus and writing a grounded answer..."):
                 result = answer(question, k=TOP_K)
         except GenerationError as exc:
+            st.session_state.messages.append(
+                {"role": "assistant", "notice": str(exc)}
+            )
             st.error(str(exc))
             return
         except Exception as exc:  # noqa: BLE001
             # Without this the chat message simply never completes and the
             # widget sits on a spinner that can no longer do anything.
             print(f"[app] question failed: {type(exc).__name__}: {exc}", flush=True)
-            st.error(
-                "Something went wrong while preparing that answer. "
-                "Please try again in a moment."
+            st.session_state.messages.append(
+                {"role": "assistant", "notice": GENERIC_ERROR}
             )
+            st.error(GENERIC_ERROR)
             return
         st.session_state.messages.append({"role": "assistant", "result": result})
         render_answer_card(result)
@@ -357,9 +374,14 @@ def main() -> None:
         if message["role"] == "user":
             with st.chat_message("user", avatar="🧑"):
                 st.markdown(message["content"])
-        else:
+        elif "result" in message:
             with st.chat_message("assistant", avatar="🏦"):
                 render_answer_card(message["result"])
+        else:
+            # A turn that ended in a notice rather than an answer. Kept in the
+            # transcript so the question asked is not silently dropped.
+            with st.chat_message("assistant", avatar="🏦"):
+                st.info(message["notice"])
 
     typed = st.chat_input("Ask a factual question about an HDFC Mutual Fund…")
     question = typed or st.session_state.pop("pending", None)
