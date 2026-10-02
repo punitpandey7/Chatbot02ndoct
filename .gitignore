@@ -16,8 +16,14 @@ __pycache__/
 .mypy_cache/
 .ruff_cache/
 
-# --- vector store: binary, rebuild with `python -m src.ingest` ---
-data/chroma/
+# --- vector store ---
+# COMMITTED ON PURPOSE (~4.6 MB).
+# Streamlit Community Cloud runs no build step, so there is nowhere to run
+# `python -m src.ingest`. Committing the built index is what lets the app
+# start without re-embedding, which is the one invariant we do not break.
+# Rebuild and re-commit after changing sources or the chunking settings:
+#     python -m src.ingest --rebuild
+# data/chroma/
 
 # --- sentence-transformers / HuggingFace model cache ---
 # Rebuilt automatically on first run; ~90 MB of weights.

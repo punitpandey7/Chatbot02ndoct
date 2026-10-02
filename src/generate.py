@@ -63,34 +63,61 @@ class GenerationError(RuntimeError):
     """Raised for config/API problems; the caller must not fake an answer."""
 
 
+def _secret(name: str) -> str:
+    """Read a Streamlit-managed secret, if we are running under Streamlit.
+
+    Streamlit Community Cloud does not ship a .env file: secrets are injected
+    through its own store. `st.secrets` raises outside a Streamlit runtime,
+    which is the normal case for the CLI, so treat that as "not set".
+    """
+    try:
+        import streamlit as st
+
+        return str(st.secrets.get(name) or "").strip()
+    except Exception:  # noqa: BLE001 — no secrets file, or not running in Streamlit
+        return ""
+
+
 def load_api_key() -> str:
-    """Read GROQ_API_KEY from .env (or the environment). Never logs the value."""
-    if ENV_FILE.exists():
+    """Read GROQ_API_KEY from Streamlit secrets, .env, or the environment.
+
+    Never logs the value. Order matters: a deployed platform's own secret
+    store wins over a local file, so a stale .env cannot override what the
+    host was configured with.
+    """
+    key = _secret(GROQ_API_KEY_ENV)
+    if not key and ENV_FILE.exists():
         try:
             from dotenv import load_dotenv
 
             load_dotenv(ENV_FILE, override=False)
         except Exception:  # noqa: BLE001 — fall back to the OS environment
             pass
-    key = (os.getenv(GROQ_API_KEY_ENV) or "").strip()
+        key = (os.getenv(GROQ_API_KEY_ENV) or "").strip()
+    if not key:
+        key = (os.getenv(GROQ_API_KEY_ENV) or "").strip()
     if not key:
         raise GenerationError(
-            f"{GROQ_API_KEY_ENV} is not set. Add it to {PROJECT_ROOT / '.env'} "
-            f"(never commit that file). Retrieval still works without it: "
-            f"python -m src.retrieve"
+            f"{GROQ_API_KEY_ENV} is not set. Locally, add it to "
+            f"{PROJECT_ROOT / '.env'} (never commit that file). On a deployed "
+            f"host, add it under Settings -> Secrets. Retrieval still works "
+            f"without it: python -m src.retrieve"
         )
     return key
 
 
 def model_name() -> str:
-    if ENV_FILE.exists():
+    """Resolve the model name the same way the key is resolved."""
+    name = _secret(GROQ_MODEL_ENV)
+    if not name and ENV_FILE.exists():
         try:
             from dotenv import load_dotenv
 
             load_dotenv(ENV_FILE, override=False)
         except Exception:  # noqa: BLE001
             pass
-    return (os.getenv(GROQ_MODEL_ENV) or "").strip() or GROQ_MODEL_DEFAULT
+        name = (os.getenv(GROQ_MODEL_ENV) or "").strip()
+    return name or (os.getenv(GROQ_MODEL_ENV) or "").strip() or GROQ_MODEL_DEFAULT
 
 
 def build_context(hits: list[dict[str, Any]]) -> str:
