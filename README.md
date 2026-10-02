@@ -1,3 +1,14 @@
+---
+title: HDFC MF FAQ Assistant
+emoji: 🏦
+colorFrom: indigo
+colorTo: pink
+sdk: docker
+app_port: 7860
+pinned: false
+license: mit
+---
+
 # HDFC Mutual Fund FAQ RAG Chatbot (class demo)
 
 Facts-only Q&A for five HDFC schemes. Answers must come from retrieved public pages. **No investment advice.**
@@ -92,6 +103,60 @@ Inspect after ingest: `data/raw/`, `data/chunks.txt`, `data/embeddings.txt`.
 `python -m src.retrieve` still works with an empty `.env`.
 
 Embedding model: `sentence-transformers/all-MiniLM-L6-v2` (384-d, local). Vector DB: Chroma on disk under `data/chroma/` (gitignored).
+
+## Deploy (free)
+
+Hosted on **Hugging Face Spaces**, Docker SDK, CPU basic (free).
+
+```
+https://huggingface.co/spaces/<your-username>/<space-name>
+```
+
+**Why Docker and not the Streamlit SDK:** Spaces has no build-command hook.
+The Streamlit SDK only runs `streamlit run <file>` and installs
+`requirements.txt` — there is no way to rebuild the vector DB, and
+`data/chroma/` is gitignored. The Docker SDK gives a real `RUN` step, which
+is what `Dockerfile` uses to run Stage A during the image build.
+
+### One-time setup
+
+1. New Space → **Docker** → connect the GitHub repo.
+2. Hardware → **CPU basic** (free).
+3. Settings → **Variables and secrets** → add:
+
+   | Key | Value |
+   |---|---|
+   | `GROQ_API_KEY` | *(secret)* your `gsk_...` key |
+   | `GROQ_MODEL` | `openai/gpt-oss-120b` |
+
+4. Build. The log ends with `[ingest] Stage A complete.` then
+   `[store] ... 239` before the Space starts serving.
+
+Nothing else to configure — `app_port: 7860` and the Dockerfile's
+`EXPOSE 7860` already agree, and the app binds `0.0.0.0` in its `CMD`.
+
+### What the build does
+
+```dockerfile
+RUN python -m src.ingest   # fetch → chunk → embed → persist Chroma
+RUN python -m src.store    # write data/chroma_status.txt
+RUN test -f data/chroma/chroma.sqlite3 || exit 1
+```
+
+The last line is deliberate: it fails the build loudly rather than shipping an
+image whose app can only show an error page.
+
+If the build machine cannot reach `groww.in` or `amfiindia.com`, ingest falls
+back to the committed `data/raw/` cache (7 documents) instead of producing an
+empty corpus — so the build does not depend on a third-party site being up.
+
+### Expected behaviour
+
+- First build downloads `torch` (~800 MB) and MiniLM, so it takes several
+  minutes. Later builds reuse the Docker layer cache.
+- A free Space sleeps after ~48 h idle and takes ~10-30 s to wake on the next
+  request. The first answer after waking is slower.
+- Every rebuild re-runs Stage A, so the corpus date reflects that build.
 
 ## Known limits
 
