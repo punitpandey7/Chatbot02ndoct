@@ -19,6 +19,10 @@ __pycache__/
 # --- vector store: binary, rebuild with `python -m src.ingest` ---
 data/chroma/
 
+# --- sentence-transformers / HuggingFace model cache ---
+# Rebuilt automatically on first run; ~90 MB of weights.
+data/.hf_cache/
+
 # --- streamlit local config ---
 .streamlit/secrets.toml
 

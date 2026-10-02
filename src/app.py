@@ -14,6 +14,7 @@ It only opens the persisted Chroma database and calls pipeline.answer.
 from __future__ import annotations
 
 import sys
+import threading
 from pathlib import Path
 
 # `streamlit run src/app.py` puts only this file's own directory
@@ -28,6 +29,8 @@ if _PROJECT_ROOT not in sys.path:
 import streamlit as st
 
 from src.config import CHROMA_DIR, TOP_K
+from src.embed import get_model
+from src.generate import GenerationError
 from src.pipeline import DISCLAIMER, answer
 from src.store import collection_count
 
@@ -225,13 +228,57 @@ def render_sidebar() -> None:
             st.rerun()
 
 
+def _warm() -> None:
+    """Preload MiniLM. Failures are non-fatal: the question path retries."""
+    try:
+        get_model()
+    except Exception:  # noqa: BLE001 — warm-up must never break the page
+        pass
+
+
+_warm_thread = None
+_warm_started = False
+
+
+def start_warmup() -> None:
+    """Kick off the ~20 s MiniLM load on a daemon thread, once per process.
+
+    Loading it inline would block the first script run for the full duration,
+    which is long enough for a hosting proxy to drop the connection. On a
+    background thread the page paints immediately and the model is usually
+    ready before the first question is typed. `embed.get_model()` is
+    lock-guarded, so a question arriving mid-load waits for this one rather
+    than starting a second copy.
+
+    `_warm_started` is a separate flag from the thread's liveness: the thread
+    finishes as soon as the model is cached, and Streamlit reruns the script
+    on every interaction, so an liveness check alone would spawn a fresh
+    no-op thread on each rerun.
+    """
+    global _warm_thread, _warm_started
+    if not _warm_started:
+        _warm_started = True
+        _warm_thread = threading.Thread(target=_warm, daemon=True)
+        _warm_thread.start()
+
+
 def handle(question: str) -> None:
     st.session_state.messages.append({"role": "user", "content": question})
     with st.chat_message("user", avatar="🧑"):
         st.markdown(question)
     with st.chat_message("assistant", avatar="🏦"):
-        with st.spinner("Searching the corpus and writing a grounded answer..."):
-            result = answer(question, k=TOP_K)
+        cold = _warm_thread is not None and _warm_thread.is_alive()
+        label = (
+            "Starting up — first answer loads the search model (~20 s)..."
+            if cold
+            else "Searching the corpus and writing a grounded answer..."
+        )
+        try:
+            with st.spinner(label):
+                result = answer(question, k=TOP_K)
+        except GenerationError as exc:
+            st.error(str(exc))
+            return
         st.session_state.messages.append({"role": "assistant", "result": result})
         render_answer_card(result)
 
@@ -246,6 +293,7 @@ def main() -> None:
     st.markdown(CSS, unsafe_allow_html=True)
     init_state()
     render_sidebar()
+    start_warmup()
 
     st.markdown(
         "<div class='hero'>"

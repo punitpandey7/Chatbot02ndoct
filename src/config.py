@@ -16,6 +16,12 @@ EMBEDDING_MODEL = "sentence-transformers/all-MiniLM-L6-v2"
 EMBEDDING_DIM = 384
 CHROMA_COLLECTION = "hdfc_mf_faq"
 
+# Model cache kept INSIDE the project directory rather than the user home.
+# On a hosted container the home cache is not carried from build to runtime, so
+# every cold start re-downloads ~90 MB and blocks the first question for ~22 s.
+# Anchoring it to the project makes the download part of the deployment.
+HF_HOME = str(DATA_DIR / ".hf_cache")
+
 # Architecture default; Phase 2 inspects raw pages and may tune.
 CHUNK_SIZE = 500
 CHUNK_OVERLAP = 80

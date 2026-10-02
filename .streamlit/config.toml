@@ -1,0 +1,17 @@
+# Streamlit configuration.
+#
+# The default file watcher re-scans sys.modules on every filesystem event.
+# With transformers loaded, that means probing every model submodule, each of
+# which raises `ModuleNotFoundError: No module named 'torchvision'` — thousands
+# of failed imports, several seconds of CPU, and a flood of log output. The
+# model cache under data/.hf_cache writes on every cold start, so those events
+# fire exactly when the app is busiest.
+#
+# Nothing here needs live-reloading: the app reads an already-built Chroma
+# database and never re-ingests at runtime.
+[server]
+fileWatcherType = "none"
+headless = true
+
+[browser]
+gatherUsageStats = false
