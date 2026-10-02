@@ -14,6 +14,12 @@ from src.config import EMBEDDING_MODEL, HF_HOME
 os.environ.setdefault("HF_HOME", HF_HOME)
 os.environ.setdefault("SENTENCE_TRANSFORMERS_HOME", HF_HOME)
 os.environ.setdefault("TOKENIZERS_PARALLELISM", "false")
+os.environ.setdefault("HF_HUB_DISABLE_TELEMETRY", "1")
+# Bound the network fallback. The hub client otherwise retries against a
+# default timeout of ten seconds per attempt, so on a throttled host a single
+# load can sit there for many minutes with nothing to show for it.
+os.environ.setdefault("HF_HUB_ETAG_TIMEOUT", "10")
+os.environ.setdefault("HF_HUB_DOWNLOAD_TIMEOUT", "60")
 
 _model = None
 # Guards against the UI warming the model on a background thread while a
