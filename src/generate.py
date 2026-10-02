@@ -25,11 +25,13 @@ from src.config import (
     ABSTAIN_PHRASE,
     ENV_FILE,
     GROQ_API_KEY_ENV,
+    GROQ_MAX_RETRIES,
     GROQ_MAX_TOKENS,
     GROQ_MODEL_DEFAULT,
     GROQ_MODEL_ENV,
     GROQ_REASONING_EFFORT,
     GROQ_TEMPERATURE,
+    GROQ_TIMEOUT_SECONDS,
     MAX_ANSWER_SENTENCES,
     PROJECT_ROOT,
 )
@@ -155,6 +157,20 @@ def _strip_foreign_urls(text: str, allowed: set[str]) -> str:
     return re.sub(r"https?://\S+", _replace, text)
 
 
+def _is_unsupported_argument(exc: BaseException) -> bool:
+    """True only when the failure was about the argument we added.
+
+    Timeouts, rate limits and transport errors must not be retried: each
+    retry costs another full wait, and the caller is already on a hosted
+    request with a short budget.
+    """
+    if isinstance(exc, (TimeoutError, ConnectionError)):
+        return False
+    text = f"{type(exc).__name__} {exc}".lower()
+    markers = ("reasoning_effort", "unsupported", "unrecognized", "unexpected", "invalid")
+    return any(m in text for m in markers)
+
+
 def _create_completion(client, prompt: str, user_payload: str):
     """Call Groq, asking reasoning models to skip their hidden trace.
 
@@ -179,7 +195,13 @@ def _create_completion(client, prompt: str, user_payload: str):
         )
     except GenerationError:
         raise
-    except Exception:  # noqa: BLE001 — unsupported argument on this model
+    except Exception as exc:  # noqa: BLE001
+        # Retry without the argument ONLY when the model rejected that
+        # argument. Retrying a timeout or a rate limit would pay the full
+        # wait a second time, which is what turns one slow reply into a
+        # request the browser has already given up on.
+        if not _is_unsupported_argument(exc):
+            raise
         response = client.chat.completions.create(**kwargs)
 
     # Timing only. The upstream call is the one step that can be slow purely
@@ -229,7 +251,11 @@ def answer_from_chunks(
         raise GenerationError("groq is not installed. pip install -r requirements.txt") from exc
 
     try:
-        client = Groq(api_key=load_api_key())
+        client = Groq(
+            api_key=load_api_key(),
+            timeout=GROQ_TIMEOUT_SECONDS,
+            max_retries=GROQ_MAX_RETRIES,
+        )
     except GenerationError:
         raise
     except Exception as exc:  # noqa: BLE001

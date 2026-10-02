@@ -63,6 +63,14 @@ GROQ_TEMPERATURE = 0.0  # factual Q&A: keep it deterministic
 GROQ_MAX_TOKENS = 1024
 GROQ_REASONING_EFFORT = "none"  # suppress the trace when the model supports it
 
+# The Groq SDK defaults to a 600 s timeout and 2 automatic retries. On a
+# hosted free tier that means one slow upstream call can hold a request open
+# for many minutes: the browser drops the connection long before, and the
+# retry quietly pays the wait again. Keep the whole call inside the window a
+# proxy will actually serve, and fail loudly instead of retrying.
+GROQ_TIMEOUT_SECONDS = 25
+GROQ_MAX_RETRIES = 0
+
 # Architecture §7: answer body must be <= 3 sentences.
 MAX_ANSWER_SENTENCES = 3
 
