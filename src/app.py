@@ -293,41 +293,43 @@ def start_warmup() -> None:
         _warm_thread.start()
 
 
+def _queue_question(question: str) -> None:
+    """Hold a clicked example until the script body picks it up."""
+    st.session_state.pending = question
+
+
 def handle(question: str) -> None:
+    """Record the turn and compute its result. Drawing is left to the loop.
+
+    handle() deliberately renders nothing itself. The transcript loop in main()
+    already draws every message, including this one, so drawing here as well
+    placed the answer after the elements that follow it in the script.
+    """
     st.session_state.messages.append({"role": "user", "content": question})
-    with st.chat_message("user", avatar="🧑"):
-        st.markdown(question)
-    with st.chat_message("assistant", avatar="🏦"):
-        if not is_ready():
-            # Asking anyway would start a run that cannot finish: the first
-            # load is dominated by an import that takes longer than a hosting
-            # proxy will wait, and the browser would drop the connection and
-            # lose the question. Say so, and let them ask again.
-            st.session_state.messages.append(
-                {"role": "assistant", "notice": NOT_READY_NOTICE}
-            )
-            st.info(NOT_READY_NOTICE)
-            return
-        try:
-            with st.spinner("Searching the corpus and writing a grounded answer..."):
-                result = answer(question, k=TOP_K)
-        except GenerationError as exc:
-            st.session_state.messages.append(
-                {"role": "assistant", "notice": str(exc)}
-            )
-            st.error(str(exc))
-            return
-        except Exception as exc:  # noqa: BLE001
-            # Without this the chat message simply never completes and the
-            # widget sits on a spinner that can no longer do anything.
-            print(f"[app] question failed: {type(exc).__name__}: {exc}", flush=True)
-            st.session_state.messages.append(
-                {"role": "assistant", "notice": GENERIC_ERROR}
-            )
-            st.error(GENERIC_ERROR)
-            return
-        st.session_state.messages.append({"role": "assistant", "result": result})
-        render_answer_card(result)
+    if not is_ready():
+        # Asking anyway would start a run that cannot finish: the first
+        # load is dominated by an import that takes longer than a hosting
+        # proxy will wait, and the browser would drop the connection and
+        # lose the question. Say so, and let them ask again.
+        st.session_state.messages.append(
+            {"role": "assistant", "notice": NOT_READY_NOTICE}
+        )
+        return
+    try:
+        with st.spinner("Searching the corpus and writing a grounded answer..."):
+            result = answer(question, k=TOP_K)
+    except GenerationError as exc:
+        st.session_state.messages.append({"role": "assistant", "notice": str(exc)})
+        return
+    except Exception as exc:  # noqa: BLE001
+        # Without this the chat message simply never completes and the
+        # widget sits on a spinner that can no longer do anything.
+        print(f"[app] question failed: {type(exc).__name__}: {exc}", flush=True)
+        st.session_state.messages.append(
+            {"role": "assistant", "notice": GENERIC_ERROR}
+        )
+        return
+    st.session_state.messages.append({"role": "assistant", "result": result})
 
 
 def main() -> None:
@@ -365,15 +367,14 @@ def main() -> None:
         )
         st.stop()
 
-    if not st.session_state.messages:
-        st.markdown(
-            "<div class='ex-heading'>💡 Try one of these</div>",
-            unsafe_allow_html=True,
-        )
-        cols = st.columns(3)
-        for i, (col, question) in enumerate(zip(cols, EXAMPLE_QUESTIONS)):
-            if col.button(question, key=f"example_{i}", use_container_width=True):
-                st.session_state.pending = question
+    # Ask first, render second. A question has to be recorded before the
+    # transcript loop runs: if the loop went first, the new turn would be drawn
+    # after everything below it and the examples would drift into the middle of
+    # the history instead of staying under it.
+    typed = st.chat_input("Ask a factual question about an HDFC Mutual Fund…")
+    question = typed or st.session_state.pop("pending", None)
+    if question:
+        handle(question)
 
     for message in st.session_state.messages:
         if message["role"] == "user":
@@ -388,10 +389,28 @@ def main() -> None:
             with st.chat_message("assistant", avatar="🏦"):
                 st.info(message["notice"])
 
-    typed = st.chat_input("Ask a factual question about an HDFC Mutual Fund…")
-    question = typed or st.session_state.pop("pending", None)
-    if question:
-        handle(question)
+    # Always visible, below the conversation, so one click starts a new topic at
+    # any point in the session. They used to render only while the transcript
+    # was empty, and because that check ran before handle() recorded anything,
+    # the row appeared next to the first answer and then vanished on the next
+    # interaction, which read as the layout glitching.
+    st.markdown(
+        "<div class='ex-heading'>💡 Try one of these</div>",
+        unsafe_allow_html=True,
+    )
+    cols = st.columns(3)
+    for i, (col, example) in enumerate(zip(cols, EXAMPLE_QUESTIONS)):
+        # on_click, not an inline `if button(...)`: a callback runs before the
+        # script body, so `pending` is already set by the time the pop above
+        # happens. Streamlit reruns only once per click, so setting pending
+        # after that pop would leave the question queued and never answered.
+        col.button(
+            example,
+            key=f"example_{i}",
+            use_container_width=True,
+            on_click=_queue_question,
+            args=(example,),
+        )
 
 
 if __name__ == "__main__":
