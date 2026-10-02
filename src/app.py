@@ -164,13 +164,14 @@ def render_answer_card(result: dict) -> None:
     citation = ""
     url = result.get("citation_url")
     if url:
-        label = "Educational link" if refusal else "Source"
+        # Refusals and abstentions have no document to cite, so they point at
+        # investor education instead and carry no date. Only a real grounded
+        # answer gets a "Source:" line.
+        label = "Source" if not (refusal or abstained) else "Educational link"
         citation = f"{label}: <a href='{url}' target='_blank'>{url}</a>"
-    elif not refusal:
-        citation = "<span style='color:#64748b'>Source: none &mdash; nothing in the loaded sources supports this.</span>"
 
     stamp = ""
-    if result.get("last_updated"):
+    if result.get("last_updated") and not abstained:
         stamp = f"Last updated from sources: {result['last_updated']}"
 
     st.markdown(
@@ -186,12 +187,16 @@ def render_answer_card(result: dict) -> None:
         urls = [u for u in (result.get("retrieved_urls") or []) if u]
         if urls:
             unique = list(dict.fromkeys(urls))
-            with st.expander(f"Sources used ({len(unique)} chunk(s) in context)"):
+            # No counts, no "chunks", no retrieval jargon: this panel exists so
+            # a reader can see which pages were consulted, and nothing about
+            # how the lookup was done internally.
+            with st.expander("All sources consulted"):
                 for u in unique:
                     st.markdown(f"- <a href='{u}' target='_blank'>{u}</a>", unsafe_allow_html=True)
                 st.caption(
-                    "These chunks were given to the model as context. "
-                    "The card above cites exactly one of them."
+                    "The card above cites exactly one of these."
+                    if not abstained
+                    else "None of these contained the fact, so no source is cited."
                 )
 
 

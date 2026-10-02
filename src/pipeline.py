@@ -64,6 +64,11 @@ def answer(question: str, k: int = TOP_K) -> dict[str, Any]:
     )
 
     result["refusal_kind"] = None
+    if result.get("abstained") and not result.get("citation_url"):
+        # Same rule as a refusal: when there is no supporting document there is
+        # nothing to cite, so point at investor education rather than printing
+        # an empty or "none" source line.
+        result["citation_url"] = EDUCATIONAL_URL
     return result
 
 
@@ -89,19 +94,24 @@ def format_result(question: str, result: dict[str, Any], show_sources: bool) -> 
             lines.append(f"Source: {result['citation_url']}")
     else:
         lines.append("")
-        if result.get("citation_url"):
+        if result.get("abstained"):
+            # Nothing in the corpus supports an answer, so there is no source
+            # to cite. Printing "Source: none" would look like a citation that
+            # failed to resolve; an educational pointer matches how refusals
+            # are presented and keeps the no-date rule consistent.
+            lines.append(f"Educational link: {EDUCATIONAL_URL}")
+        elif result.get("citation_url"):
             lines.append(f"Source: {result['citation_url']}")
-        else:
-            lines.append("Source: none (nothing in the corpus supports this)")
-        if result.get("last_updated"):
+        if result.get("last_updated") and not result.get("abstained"):
             lines.append(f"Last updated from sources: {result['last_updated']}")
         if result.get("citation_fallback") and not result.get("abstained"):
-            lines.append("(note: model gave no valid citation; used top-ranked chunk)")
+            # Honest about a fallback without describing retrieval internals.
+            lines.append("(note: cited page chosen automatically; check it covers the answer)")
 
     urls = [u for u in (result.get("retrieved_urls") or []) if u]
     if show_sources and urls:
         lines.append("")
-        lines.append("Sources used (context only):")
+        lines.append("All sources consulted (the card above cites exactly one):")
         for url in dict.fromkeys(urls):
             lines.append(f"  - {url}")
 

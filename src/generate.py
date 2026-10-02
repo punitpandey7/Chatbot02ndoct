@@ -56,7 +56,10 @@ SOURCE: <the number of the chunk that supports the answer>
 """
 
 URL_RE = re.compile(r"https?://\S+")
-SOURCE_RE = re.compile(r"SOURCE\s*[:\-]?\s*\[?(\d+)\]?", re.IGNORECASE)
+# The value is captured to the end of the line, not as \d+: an abstention
+# replies with "SOURCE: None" and that marker still has to be recognised and
+# stripped. Greedy on purpose, so the whole value is consumed.
+SOURCE_RE = re.compile(r"\bSOURCE\b\s*[:\-]?\s*\[?([^\]\n]*)\]?", re.IGNORECASE)
 
 
 class GenerationError(RuntimeError):
@@ -154,18 +157,30 @@ def trim_sentences(text: str, limit: int = MAX_ANSWER_SENTENCES) -> str:
 
 
 def _parse(raw: str) -> tuple[str, int | None]:
-    """Split the model's reply into answer text and the cited chunk number."""
+    """Split the model's reply into answer text and the cited chunk number.
+
+    The SOURCE marker is stripped whatever it contains. An abstention replies
+    with something like "SOURCE: None", and a numeric-only pattern would fail
+    to match it and leave that fragment glued to the end of the answer.
+    """
     text = (raw or "").strip()
     source_index: int | None = None
-    match = None
-    for match in SOURCE_RE.finditer(text):
-        pass  # keep the last one
-    if match:
-        try:
-            source_index = int(match.group(1))
-        except ValueError:
-            source_index = None
-    answer = SOURCE_RE.sub("", text).strip()
+    kept_lines: list[str] = []
+
+    for line in text.splitlines():
+        # A trailing SOURCE marker on this line, numeric or not.
+        match = None
+        for match in SOURCE_RE.finditer(line):
+            pass  # keep the last one
+        if match:
+            token = (match.group(1) or "").strip().strip("[]").strip()
+            if token.isdigit():
+                source_index = int(token)
+            line = (line[: match.start()] + line[match.end() :]).strip()
+        if line:
+            kept_lines.append(line)
+
+    answer = " ".join(kept_lines).strip()
     answer = re.sub(r"^ANSWER\s*[:\-]\s*", "", answer, flags=re.IGNORECASE).strip()
     return answer, source_index
 
