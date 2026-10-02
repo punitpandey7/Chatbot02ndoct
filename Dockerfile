@@ -1,9 +1,14 @@
-# Hugging Face Spaces (Docker SDK) build for the HDFC MF FAQ assistant.
+# Container image for the HDFC MF FAQ assistant.
 #
-# Why Docker and not the Streamlit SDK: Spaces has no "build command" hook.
-# With Docker we get a real RUN step, which is what lets us rebuild the
-# Chroma vector DB during the image build. data/chroma/ is gitignored, so a
-# fresh clone has no index and the app would show "no vector database found".
+# This is NOT how the app is deployed — that is Streamlit Community Cloud,
+# which installs requirements.txt and needs no image. This file is here so the
+# app can be run in a container locally:
+#
+#     docker build -t hdfc-mf-faq .
+#     docker run -p 8501:8501 hdfc-mf-faq
+#
+# data/chroma/ is committed to the repo, so the index is already in the image
+# and the build neither fetches source pages nor embeds anything.
 
 FROM python:3.11-slim
 
@@ -23,24 +28,16 @@ RUN pip install --no-cache-dir --upgrade pip \
 
 COPY . .
 
-# --- Stage A: build the vector DB during the image build ---------------------
-# Fetches the 7 source pages, chunks, embeds 239 chunks with MiniLM, and
-# persists Chroma to data/chroma/. On total network failure it falls back to
-# the committed data/raw/ cache, so this cannot silently produce an empty DB.
-RUN python -m src.ingest \
-    && python -m src.store
+# Fail loudly if the committed index did not make it into the image, rather
+# than shipping a container whose app can only show an error page.
+RUN test -f data/chroma/chroma.sqlite3 \
+    || (echo "committed vector DB missing from image" && exit 1)
 
-# Fail the build if the index did not actually materialise, rather than
-# shipping an image whose app only shows an error page.
-RUN test -f data/chroma/chroma.sqlite3 || (echo "vector DB missing after ingest" && exit 1)
+EXPOSE 8501
 
-# Spaces routes to this port; keep in sync with `app_port` in README.md.
-EXPOSE 7860
-
-# src/app.py sets no server address/port, so both are supplied here.
-CMD ["streamlit", "run", "src/app.py", \
-     "--server.port", "7860", \
+# Root app.py is the same entrypoint the deployment uses: it puts the repo root
+# on sys.path and calls src.app.main().
+CMD ["streamlit", "run", "app.py", \
+     "--server.port", "8501", \
      "--server.address", "0.0.0.0", \
-     "--server.headless", "true", \
-     "--server.enableCORS", "false", \
-     "--server.enableXsrfProtection", "false"]
+     "--server.headless", "true"]

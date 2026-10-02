@@ -1,17 +1,13 @@
----
-title: HDFC MF FAQ Assistant
-emoji: 🏦
-colorFrom: indigo
-colorTo: pink
-sdk: docker
-app_port: 7860
-pinned: false
-license: mit
----
-
 # HDFC Mutual Fund FAQ RAG Chatbot (class demo)
 
 Facts-only Q&A for five HDFC schemes. Answers must come from retrieved public pages. **No investment advice.**
+
+| | |
+|---|---|
+| **Live app** | <https://chatbot02ndoct-tepdujs9hswvhytajhp7ug.streamlit.app/> |
+| **Source** | <https://github.com/punitpandey7/Chatbot02ndoct> |
+| **Stack** | Python · Streamlit · ChromaDB · `sentence-transformers/all-MiniLM-L6-v2` · Groq |
+| **Corpus** | 7 public pages → 239 chunks, ingested 2026-09-29 |
 
 ## Scope
 
@@ -38,6 +34,7 @@ Put your Groq key in `.env` (needed for answers; retrieval works without it). Ne
 | `python -m src.ingest` | Full Stage A: load → chunk → embed → Chroma (skip if DB already populated) |
 | `python -m src.ingest --rebuild` | Wipe and rebuild the vector store |
 | `python -m src.app` | **Web UI** — opens on http://localhost:8501 |
+| `streamlit run app.py` | Same UI via the **root launcher** — this is the entrypoint Streamlit Community Cloud uses, since the host only looks for `app.py` at the repo root |
 | `python -m src.store` | Print/write `data/chroma_status.txt` (count + persist path) |
 | `python -m src.pipeline` | Interactive **chat in the terminal** (Groq). `:q` quit, `:sources on` |
 | `python -m src.pipeline "expense ratio of HDFC Large Cap?"` | One-shot answer |
@@ -67,8 +64,13 @@ Streamlit, single page, per PRD §9:
   **not in corpus** (slate)
 - Each answer card shows exactly **one** citation link plus
   `Last updated from sources: <date>`
-- Optional `Sources used` expander listing every retrieved URL
-- Sidebar: live chunk count, the five schemes, scope limits, AMFI link
+- `All sources consulted` expander listing every retrieved URL
+- No implementation detail anywhere on the page: the collection name, chunk
+  count, embedding model and vector store stay out of the UI and live here instead
+- Sidebar: the five schemes, what the assistant does and does not do, the two
+  source links, and `Clear conversation`
+- The three example questions remain available for the whole session, below the
+  conversation, so one click starts a new topic at any point
 
 ## How a question is answered
 
@@ -102,61 +104,95 @@ Inspect after ingest: `data/raw/`, `data/chunks.txt`, `data/embeddings.txt`.
 `src/generate.py`. Retrieval and guardrails need no key, so
 `python -m src.retrieve` still works with an empty `.env`.
 
-Embedding model: `sentence-transformers/all-MiniLM-L6-v2` (384-d, local). Vector DB: Chroma on disk under `data/chroma/` (gitignored).
+Embedding model: `sentence-transformers/all-MiniLM-L6-v2` (384-d, local). Vector DB:
+Chroma persisted on disk under `data/chroma/`. That directory **is committed**
+(17 files, ~4.6 MB) on purpose, because the free host used here runs no build
+step and so has no opportunity to run ingest — see [Deploy](#deploy-free).
 
 ## Deploy (free)
 
-Hosted on **Hugging Face Spaces**, Docker SDK, CPU basic (free).
+Hosted on **Streamlit Community Cloud** (free tier).
 
 ```
-https://huggingface.co/spaces/<your-username>/<space-name>
+https://chatbot02ndoct-tepdujs9hswvhytajhp7ug.streamlit.app/
 ```
 
-**Why Docker and not the Streamlit SDK:** Spaces has no build-command hook.
-The Streamlit SDK only runs `streamlit run <file>` and installs
-`requirements.txt` — there is no way to rebuild the vector DB, and
-`data/chroma/` is gitignored. The Docker SDK gives a real `RUN` step, which
-is what `Dockerfile` uses to run Stage A during the image build.
+### Why this host
+
+The app peaks at ~635 MB of resident memory: importing `torch` costs ~200 MB,
+`sentence_transformers` ~250 MB more, the MiniLM weights ~110 MB, and Chroma
+~30 MB. Render's free tier *and* its $7 starter tier both cap at 512 MB, so the
+process was OOM-killed on every start. Only Render's $25 Standard tier (2 GB)
+would have fit, and that was not worth it for a class demo. Streamlit Community
+Cloud gives ~1 GB, which is enough.
+
+This was measured, not inferred — see [Instrumenting it](#instrumenting-it).
+
+### Instrumenting it
+
+Every phase prints a timing line to the server log — `[embed]`, `[retrieve]`,
+`[generate]`, `[pipeline]` — and nothing to the UI, because latency and internals
+are not the user's business:
+
+```text
+[embed] model ready in 34.0s (NETWORK (no local copy))
+[retrieve] open 0.01s | embed 0.15s | query 0.01s | total 0.17s
+[generate] upstream call 0.61s (openai/gpt-oss-120b)
+[pipeline] retrieve 0.17s | generate 0.80s | total 0.97s
+```
+
+This is not decoration. The first deployment died silently on every start, and
+guessing from outside the runtime cost four deploy cycles on real but secondary
+bugs. Adding these timers is what turned "it hangs" into "it is OOM-killed at
+512 MB, and here is exactly which import is responsible" — the breakdown quoted
+above came straight out of them.
+
+### How the deployment is wired
+
+Community Cloud clones the repo, installs `requirements.txt`, then looks for
+`app.py` / `main.py` / `streamlit_app.py` **at the repository root**. The app
+lives in `src/app.py`, so the root `app.py` is a launcher that puts the repo
+root on `sys.path` and calls `src.app.main()`.
+
+Two consequences of the host having no build step and no shell:
+
+- `data/chroma/` is committed, because nothing would ever run `src.ingest`.
+  To change the corpus: run `python -m src.ingest --rebuild` locally and commit
+  the updated `data/chroma/` directory.
+- `.env` does not exist on the host, so `src/generate.py` reads `st.secrets`
+  first and falls back to `.env` for local runs.
 
 ### One-time setup
 
-1. New Space → **Docker** → connect the GitHub repo.
-2. Hardware → **CPU basic** (free).
-3. Settings → **Variables and secrets** → add:
+1. New app → connect this GitHub repo, branch `main`.
+2. Settings → **Secrets** → add:
 
    | Key | Value |
    |---|---|
-   | `GROQ_API_KEY` | *(secret)* your `gsk_...` key |
-   | `GROQ_MODEL` | `openai/gpt-oss-120b` |
+   | `GROQ_API_KEY` | your `gsk_...` key |
 
-4. Build. The log ends with `[ingest] Stage A complete.` then
-   `[store] ... 239` before the Space starts serving.
+   `GROQ_MODEL` is optional; it defaults to `openai/gpt-oss-120b`.
 
-Nothing else to configure — `app_port: 7860` and the Dockerfile's
-`EXPOSE 7860` already agree, and the app binds `0.0.0.0` in its `CMD`.
-
-### What the build does
-
-```dockerfile
-RUN python -m src.ingest   # fetch → chunk → embed → persist Chroma
-RUN python -m src.store    # write data/chroma_status.txt
-RUN test -f data/chroma/chroma.sqlite3 || exit 1
-```
-
-The last line is deliberate: it fails the build loudly rather than shipping an
-image whose app can only show an error page.
-
-If the build machine cannot reach `groww.in` or `amfiindia.com`, ingest falls
-back to the committed `data/raw/` cache (7 documents) instead of producing an
-empty corpus — so the build does not depend on a third-party site being up.
+That is the whole configuration. Pushing to `main` redeploys.
 
 ### Expected behaviour
 
-- First build downloads `torch` (~800 MB) and MiniLM, so it takes several
-  minutes. Later builds reuse the Docker layer cache.
-- A free Space sleeps after ~48 h idle and takes ~10-30 s to wake on the next
-  request. The first answer after waking is slower.
-- Every rebuild re-runs Stage A, so the corpus date reflects that build.
+- A cold start downloads `torch` and the MiniLM weights from the network, which
+  took **34 s** on first boot. Later starts reuse the in-process model.
+- Answers once warm: refusals ~1.6 s, grounded answers ~2.2 s.
+- Chroma's client is created lazily and the embedding model loads in a
+  background thread, so neither blocks the first paint.
+
+### Deploy notes worth knowing
+
+- A free Community Cloud app sleeps when idle. The first request after a sleep
+  is slower, and `is_ready()` answers with a short notice rather than starting
+  a run the proxy would drop.
+- If you push and the old build keeps serving, the redeploy has not happened
+  yet — **Reboot** from the Streamlit dashboard forces it from the current
+  `main` HEAD.
+- `Dockerfile` is kept for running the app in a container locally. It is not
+  used by the deployment above.
 
 ## Disclaimer
 
@@ -196,7 +232,8 @@ human-readably to [`data/chunks.txt`](data/chunks.txt), and every 384-d vector t
 ## Sample Q&A
 
 These are **real outputs**, produced by running `python -m src.pipeline "<question>"`
-against the live Groq model on the ingested corpus — not hand-written.
+against the live Groq model on the ingested corpus — not hand-written. Each was
+re-confirmed on the deployed app.
 
 ### Factual questions (answered from the corpus)
 
@@ -228,14 +265,16 @@ against the live Groq model on the ingested corpus — not hand-written.
 
 **7. How to download capital-gains / account statement?**
 > `This fact is not in the loaded sources.`
-> Source: none — nothing in the corpus supports this.
+> Educational link: [amfiindia.com/mutual-fund](https://www.amfiindia.com/mutual-fund)
 
 This is the **correct** behaviour, not a failure. The string `statement` appears
 **zero times** across all seven ingested pages, so there is nothing to ground an
 answer in. The contract (architecture §7, PRD F7) prefers abstaining over inventing,
-so it refuses. Fixing it properly means adding a source that actually documents
-statement downloads — e.g. a Groww help-centre article on account statements — then
-re-running ingest.
+so it refuses.
+
+An abstention is presented like a refusal rather than like an answer: an
+educational pointer, and **no date**. Printing a source or a date would imply
+the answer came from a dated document, which is exactly the claim it cannot make.
 
 ### Refusals (guardrails run before retrieval)
 
@@ -256,11 +295,19 @@ corpus fact, so printing one would be misleading.
 
 ### Acceptance summary
 
-| Bar (PRD §13) | Result |
-|---|---|
-| Factual items cite a real corpus URL | 6/6 ✅ |
-| Refusal items recommend no product | 3/3 ✅ |
-| No fabricated ratios | ✅ (1 abstention instead) |
+All ten §13 questions were re-run against the **live deployment**, refusals
+included — not just locally.
+
+| Bar (PRD §13) | Local | Live |
+|---|---|---|
+| Factual items cite a real corpus URL | 6/6 ✅ | 6/6 ✅ |
+| Refusal items recommend no product | 3/3 ✅ | 3/3 ✅ |
+| No fabricated ratios | ✅ (1 abstention instead) | ✅ |
+
+A transcript-level sweep of the live session also confirmed: no `chunk` wording
+on the page, no `Source: none` line, no leaked `SOURCE:` marker, no internal
+terms (vector / embedding / Chroma / model name / dimension), and the PAN from
+question 10 never echoed back in any reply.
 
 ## Known limits
 
