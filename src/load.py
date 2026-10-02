@@ -243,28 +243,38 @@ def load_all() -> list[LoadedDocument]:
         try:
             html = fetch_with_retry(url)
             text = extract_page_text(html, scheme_name)
-        except Exception as exc:  # noqa: BLE001 — demo loader must skip bad URLs
-            print(f"[load] skip {url}: {exc}")
-            continue
-
-        if len(text) < MIN_USABLE_CHARS:
-            # Blocked / JS-only shell. Never overwrite a good file with this.
+            thin = len(text) < MIN_USABLE_CHARS
+        except Exception as exc:  # noqa: BLE001 — hard failure: never lose a cached doc
+            # A build on a clean machine (CI, Render) may be unable to reach the
+            # source at all. The committed data/raw/ cache is the fallback.
             cached = read_cached_raw(raw_path)
-            if cached is not None:
-                print(
-                    f"[load] thin fetch ({len(text)} chars) for {url}; "
-                    f"reusing cached {raw_path.name} ({len(cached)} chars)"
-                )
-                text = cached
-            else:
-                print(
-                    f"[load] skip {url}: thin extract ({len(text)} chars "
-                    f"< {MIN_USABLE_CHARS}) after {FETCH_RETRIES} attempts"
-                )
+            if cached is None:
+                print(f"[load] skip {url}: {exc}")
                 continue
+            print(
+                f"[load] fetch failed for {url} ({exc}); "
+                f"reusing cached {raw_path.name} ({len(cached)} chars)"
+            )
+            text = cached
         else:
-            raw_path.write_text(text, encoding="utf-8")
-            print(f"[load] ok {url} -> {raw_path.name} ({len(text)} chars)")
+            if thin:
+                # Blocked / JS-only shell. Never overwrite a good file with this.
+                cached = read_cached_raw(raw_path)
+                if cached is not None:
+                    print(
+                        f"[load] thin fetch ({len(text)} chars) for {url}; "
+                        f"reusing cached {raw_path.name} ({len(cached)} chars)"
+                    )
+                    text = cached
+                else:
+                    print(
+                        f"[load] skip {url}: thin extract ({len(text)} chars "
+                        f"< {MIN_USABLE_CHARS}) after {FETCH_RETRIES} attempts"
+                    )
+                    continue
+            else:
+                raw_path.write_text(text, encoding="utf-8")
+                print(f"[load] ok {url} -> {raw_path.name} ({len(text)} chars)")
 
         docs.append(
             LoadedDocument(
