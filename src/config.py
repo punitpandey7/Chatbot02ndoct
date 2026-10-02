@@ -1,6 +1,15 @@
 """Shared paths and RAG constants (Phase 1)."""
 
+import os
 from pathlib import Path
+
+# Chroma phones home (posthog) when a client is created. On a hosted network
+# that request can stall for minutes, and because it happens inside
+# PersistentClient() the whole page hangs with no output at all. Nothing here
+# is needed to answer a question, so opt out before chromadb is ever imported.
+# Must run before `import chromadb`, which is why it lives in this module:
+# config is imported first by every entry point.
+os.environ.setdefault("ANONYMIZED_TELEMETRY", "False")
 
 PROJECT_ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = PROJECT_ROOT / "data"
