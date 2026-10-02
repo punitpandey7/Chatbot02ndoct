@@ -1,0 +1,986 @@
+Scheme: HDFC Balanced Advantage Fund
+
+Structured page data:
+
+amc_code: HDFCMutualFund_MF
+amc_name: HDFC MUTUAL FUND
+bse_scheme_code: GFGT-GR
+scheme_name: HDFC BALANCED ADVANTAGE FUND - DIRECT PLAN - GROWTH OPTION
+scheme_type: HYBRID (NC)
+stp_in_minimum_installment_amount: 1000
+stp_out_minimum_installment_amount: 1000
+stp_minimum_installment_units: 9999999
+stp_minimum_installment_numbers: 6
+stp_minimum_gap: 0
+swp_minimum_installment_amount: 100
+swp_minimum_installment_units: 999999
+swp_minimum_installment_numbers: 6
+swp_minimum_gap: 0
+scheme_type: NORMAL
+sip_start_date_time: 2013-01-01T00:00:00
+sip_end_date_time: 2013-01-01T14:00:00
+scheme_type: NFO
+nfo_risk: Moderately High Riskometer
+meta_title: HDFC Balanced Advantage Fund Direct Growth - Groww
+meta_desc: HDFC Balanced Advantage Fund Direct Growth is Dynamic Asset Allocation Hybrid mutual fund with risk-reward rating of 5/10. It has track record of 13 years, with three year return of 10.39. Risk is Very High
+scheme_code: 118968
+direct_scheme_code: 118968
+regular_search_id: hdfc-growth-fund-growth
+scheme_name: HDFC Balanced Advantage Fund Direct Growth
+search_id: hdfc-balanced-advantage-fund-direct-growth
+min_investment_amount: 100
+fund_house: HDFC Mutual Fund
+fund_manager: Srinivas Rao Ravuri
+mini_additional_investment: 100
+sip_multiplier: 1
+category: Hybrid
+rta_scheme_code: HGFGT
+exit_load: Exit Load for units in excess of 15% of the investment,1% will be charged for redemption within 1 year.
+sub_category: Dynamic Asset Allocation
+description: The Scheme seeks to provide long term capital appreciation / income from a dynamic mix of equity and debt investments.
+benchmark: NIFTY 50 Hybrid Composite Debt 50:50 Index
+benchmark_name: NIFTY 50 Hybrid Composite Debt 50:50 Index
+aum: 107295.7919
+expense_ratio: 0.78
+base_expense_ratio: 0.64
+super_category: HDFC Balanced Advantage Fund
+min_sip_investment: 100
+max_sip_investment: 999999999
+min_withdrawal: 100
+analysis_desc: 5Y and 10Y annualised returns higher than category average
+analysis_desc: Consistently lower annualised returns than category average for the past 1Y and 3Y
+analysis_subject: expense_analysis
+analysis_desc: Lower expense ratio: 0.78%
+analysis_desc: Average credit rating of the fund's holdings: AAA 
+This fund has holdings of the highest quality
+analysis_subject: base_expense_analysis
+analysis_desc: Lower Base expense ratio: 0.64%
+amc_info name: HDFC Mutual Fund
+aum: 986236.84494707
+email: shareholders.relations@hdfcfund.com
+description: HDFC Mutual Fund started their mutual fund on 30/06/2000 and its managing total assets of ₹2,70,046 Cr. Its ranked at 2 as per total assets at end of 30th Sep 2017.
+vro_website: http://www.hdfcfund.com
+category: Equity
+category_helper_text: Invests in stocks as per Contrarian investment strategy
+tax_impact: If you redeem within one year, returns are taxed at 20%. If you redeem after one year, returns exceeding Rs 1.25 lakh in a financial year are taxed at 12.5%.
+description: Contra funds follow Contrarian strategy which means investing in stocks in contrast to the prevailing sentiment. Minimum investment in equity is 65%.
+stats type: FUND_RETURN
+stats title: Fund Returns
+stats type: CATEGORY_AVG_RETURN
+stats title: Category Average
+stats type: RANK_WITHIN_CATEGORY
+stats title: Rank Within Category
+sharpe_ratio: 0.68
+sortino_ratio: 0.93
+nav: 551.039
+nav_date: 28-Sep-2026
+scheme_type: Growth
+experience: Prior to joining HDFC AMC he has worked with SBI Fund Management for 11 years.
+scheme_name: HDFC Floating Interest Rates Fund Direct Plan Growth
+scheme_code: 118961
+search_id: hdfc-floating-interest-rates-fund-direct-plan-growth
+scheme_name: HDFC Gilt Fund Direct Growth
+scheme_code: 119116
+search_id: hdfc-gilt-fund-direct-growth
+scheme_name: HDFC Dynamic Term Fund Direct Plan Growth
+scheme_code: 119075
+search_id: hdfc-dynamic-term-fund-direct-plan-growth
+scheme_name: HDFC Medium Term Fund Direct Growth
+scheme_code: 119081
+search_id: hdfc-medium-term-fund-direct-growth
+scheme_name: HDFC Equity Savings Direct Plan Growth
+scheme_code: 119128
+search_id: hdfc-equity-savings-fund-direct-growth
+scheme_name: HDFC Multi Asset Allocation Fund Direct Growth
+scheme_code: 119131
+search_id: hdfc-multi-asset-allocation-fund-direct-growth
+scheme_name: HDFC Short Term Fund Direct Plan Growth
+scheme_code: 119016
+search_id: hdfc-short-term-fund-direct-plan-growth
+scheme_name: HDFC Banking and PSU Debt Fund Direct Growth
+scheme_code: 128629
+search_id: hdfc-banking-and-psu-debt-fund-direct-growth
+scheme_name: HDFC Arbitrage Fund Direct Growth
+scheme_code: 129052
+search_id: hdfc-arbitrage-fund-direct-growth
+scheme_name: HDFC Income Plus Arbitrage Active FoF Direct Growth
+scheme_code: 130543
+scheme_name: HDFC Ultra Short Term Fund Direct Growth
+scheme_code: 145034
+search_id: hdfc-ultra-short-term-fund-direct-growth
+scheme_name: HDFC Multi Asset Active FoF Direct Growth
+scheme_code: 148903
+scheme_name: HDFC Children's Fund Direct Plan
+scheme_code: 119066
+search_id: hdfc-children's-fund-direct-plan
+experience: Prior to joining HDFC Asset Management Company Limited, he has worked with SBI Funds Management Pvt. Ltd., ICICI Bank Limited, UTI Asset Management Pvt. Ltd.
+scheme_name: HDFC Gold ETF Fund of Fund Direct Plan Growth
+scheme_code: 119132
+search_id: hdfc-gold-etf-fund-of-fund-direct-plan-growth
+scheme_name: HDFC NIFTY 50 Index Fund Direct Growth
+scheme_code: 119063
+search_id: hdfc-nifty-50-index-fund-direct-growth
+scheme_name: HDFC BSE Sensex Index Fund Direct Growth
+scheme_code: 119065
+search_id: hdfc-bse-sensex-index-fund-direct-growth
+scheme_name: HDFC Retirement Fund Equity Plan Direct Growth
+scheme_code: 136094
+search_id: hdfc-retirement-fund-equity-plan-direct-growth
+scheme_name: HDFC Retirement Fund Hybrid Equity Plan Direct Growth
+scheme_code: 136464
+search_id: hdfc-retirement-fund-hybrid-equity-plan-direct-growth
+scheme_name: HDFC Retirement Fund Hybrid Debt Plan Direct Growth
+scheme_code: 136465
+search_id: hdfc-retirement-fund-hybrid-debt-plan-direct-growth
+scheme_name: HDFC NIFTY 50 ETF IDCW
+scheme_code: 135853
+scheme_name: HDFC NIFTY50 Equal Weight Index Fund Direct Growth
+scheme_code: 149107
+search_id: hdfc-nifty50-equal-weight-index-fund-direct-growth
+scheme_name: HDFC Developed World Overseas Equity Passive FoF Direct Growth
+scheme_code: 149180
+scheme_name: HDFC NIFTY Next 50 Index Fund Direct Growth
+scheme_code: 149288
+search_id: hdfc-nifty-next-50-index-fund-direct-growth
+scheme_name: HDFC NIFTY 100 Index Fund Direct Growth
+scheme_code: 149868
+search_id: hdfc-nifty-100-index-fund-direct-growth
+scheme_name: HDFC NIFTY 100 Equal Weight Index Fund Direct Growth
+scheme_code: 149870
+search_id: hdfc-nifty-100-equal-weight-index-fund-direct-growth
+scheme_name: HDFC Silver ETF FoF Direct Growth
+scheme_code: 150737
+scheme_name: HDFC NIFTY Midcap 150 Index Fund Direct Growth
+scheme_code: 151724
+search_id: hdfc-nifty-midcap-150-index-fund-direct-growth
+scheme_name: HDFC Nifty Smallcap 250 Index Fund Direct Growth
+scheme_code: 151727
+search_id: hdfc-nifty-smallcap-250-index-fund-direct-growth
+scheme_name: HDFC BSE 500 Index Fund Direct Growth
+scheme_code: 151728
+search_id: hdfc-bse-500-index-fund-direct-growth
+scheme_name: HDFC BSE Sensex ETF
+scheme_code: 135854
+scheme_name: HDFC NIFTY200 Momentum 30 Index Fund Direct Growth
+scheme_code: 152430
+search_id: hdfc-nifty200-momentum-30-index-fund-direct-growth
+scheme_name: HDFC NIFTY Realty Index Fund Direct Growth
+scheme_code: 152521
+search_id: hdfc-nifty-realty-index-fund-direct-growth
+scheme_name: HDFC NIFTY100 Low Volatility 30 Index Fund Direct Growth
+scheme_code: 152713
+search_id: hdfc-nifty100-low-volatility-30-index-fund-direct-growth
+scheme_name: HDFC Nifty500 Multicap 50:25:25 Index Fund Direct Growth
+scheme_code: 152778
+search_id: hdfc-nifty500-multicap-50:25:25-index-fund-direct-growth
+scheme_name: HDFC Nifty LargeMidcap 250 Index Fund Direct Growth
+scheme_code: 152889
+search_id: hdfc-nifty-largemidcap-250-index-fund-direct-growth
+scheme_name: HDFC Nifty India Digital Index Fund Direct Growth
+scheme_code: 153097
+search_id: hdfc-nifty-india-digital-index-fund-direct-growth
+scheme_name: HDFC Nifty100 Quality 30 Index Fund Direct Growth
+scheme_code: 153264
+search_id: hdfc-nifty100-quality-30-index-fund-direct-growth
+scheme_name: HDFC Nifty Top 20 Equal Weight Index Fund Direct Growth
+scheme_code: 153405
+search_id: hdfc-nifty-top-20-equal-weight-index-fund-direct-growth
+scheme_name: HDFC BSE India Sector Leaders Index Fund Direct Growth
+scheme_code: 153959
+search_id: hdfc-bse-india-sector-leaders-index-fund-direct-growth
+scheme_name: HDFC Nifty India Consumption Index Fund Direct Growth
+scheme_code: 154179
+search_id: hdfc-nifty-india-consumption-index-fund-direct-growth
+scheme_name: HDFC Nifty Auto Index Fund Direct Growth
+scheme_code: 154427
+search_id: hdfc-nifty-auto-index-fund-direct-growth
+scheme_name: HDFC Nifty Metal ETF FoF Direct Growth
+scheme_code: 154505
+scheme_name: HDFC BSE REITS and Commercial Real Estate Index Fund Direct Growth
+scheme_code: 154753
+search_id: hdfc-bse-reits-and-commercial-real-estate-index-fund-direct-growth
+scheme_name: HDFC Gold Silver Passive FoF Direct Growth
+scheme_code: 154355
+experience: Prior to joining HDFC Mutual Fund he has worked with DSP Mutual Fund, Tata AMC, Mirae Asset Mutual Fund ,SBI Mutual Fund, Kotak Securities, HDFC Securities, IDBI Capital, UTI Securities and IPCL.
+scheme_name: HDFC Large & Mid Cap Fund Direct Growth
+scheme_code: 130498
+search_id: hdfc-large-mid-cap-fund-direct-growth
+scheme_name: HDFC Dividend Yield Fund Direct Growth
+scheme_code: 148609
+search_id: hdfc-dividend-yield-fund-direct-growth
+scheme_name: HDFC Aggressive Hybrid Fund Direct Plan Growth
+scheme_code: 119062
+search_id: hdfc-aggressive-hybrid-fund-direct-plan-growth
+scheme_name: HDFC Diversified Equity All Cap Active FoF Direct Growth
+scheme_code: 153860
+sid_url: https://www.hdfcfund.com
+amc_page_url: https://groww.in/mutual-funds/amc/hdfc-mutual-funds
+groww_scheme_code: INF179K01WA6
+note: Exit Load for units in excess of 15% of the investment,1% will be charged for redemption within 1 year.
+fund_name: HDFC Balanced Advantage Fund
+search_id: birla-sun-life-balanced-advantage-fund-direct-growth
+aum: 10125.4482596
+min_investment: 100
+super_category: Aditya Birla Sun Life Balanced Advantage Fund
+scheme_name: Aditya Birla Sun Life Balanced Advantage Fund Direct Growth
+fund_manager: Vineet Maloo, Mohit Sharma
+fund_house: Aditya Birla Sun Life Mutual Fund
+scheme_code: 131670
+direct_scheme_code: 131670
+regular_search_id: birla-sun-life-balanced-advantage-fund-growth
+groww_scheme_code: INF084M01DJ5
+expense_ratio: 0.89
+base_expense_ratio: 0.59
+fund_name: Aditya Birla Sun Life Balanced Advantage Fund
+search_id: icici-prudential-balanced-advantage-fund-direct-growth
+aum: 75399.17121353
+min_investment: 500
+super_category: ICICI Prudential Balanced Advantage Direct-Growth
+scheme_name: ICICI Prudential Balanced Advantage Direct Growth
+fund_manager: S Naren, Rajat Chandak, Manish Banthia, Ihab Dalwai
+fund_house: ICICI Prudential Mutual Fund
+scheme_code: 120377
+direct_scheme_code: 120377
+regular_search_id: icici-prudential-balanced-advantage-fund-regular-growth
+groww_scheme_code: INF109K012B0
+expense_ratio: 1.04
+base_expense_ratio: 0.71
+fund_name: ICICI Prudential Balanced Advantage Direct-Growth
+search_id: nippon-india-balanced-advantage-fund-direct-growth
+aum: 9917.505
+super_category: Nippon India Balanced Advantage Fund
+scheme_name: Nippon India Balanced Advantage Fund Direct Growth
+fund_manager: Meenakshi Dawar
+fund_house: Nippon India Mutual Fund
+scheme_code: 118736
+
+Visible page text:
+
+HDFC Balanced Advantage Fund Direct Growth - NAV, Mutual Fund Performance & Portfolio
+Stocks
+Invest in Stocks
+Invest in stocks, ETFs, IPOs with fast orders. Track returns on your stock holdings and view real-time P&L on your positions.
+Intraday
+Monitor top intraday performers in real time
+ETF Screener
+Get the best of Mutual Funds and flexibility of Stocks
+IPO
+Track upcoming and ongoing IPOs
+MTFs
+Buy now, pay later
+Stock Screener
+Filter based on RSI, PE ratio and more
+Stock Events
+Dividends, bonus, buybacks and more
+Demat Account
+Begin your stock market journey
+Share Market Today
+Live news updates from stock market
+F&O
+Trade in Futures & Options
+Trade in F&O using the terminal. View charts, indicators, track your orders , P&L and watchlists in a single space
+Indices
+Track markets across the globe
+Terminal
+Track charts, orders, positions, watchlists in one place
+Option chain
+Analyse chains, view payoffs, create baskets
+Pledge
+Get extra balance for trading
+Commodities
+Trade in Crude Oil, Gold, Silver and more
+API trading
+Set up and execute trades through our API
+Mutual Funds
+Invest in Mutual Funds
+Invest in direct mutual funds at zero charges via lump sump investments or SIPs
+Mutual Fund Houses
+Know about AMCs, funds, fund managers
+NFO’s
+Track all active NFOs in one place
+Mutual Funds by Groww
+Mutual funds by Groww designed for your investment goals
+Start SIP
+Build long-term wealth through disciplined monthly investing.
+Mutual Funds screener
+Filter funds based on risk, fund size and more
+Track Funds
+Import funds and track all investments in a single place
+Compare Funds
+More
+SIP calculator
+Estimate returns on a SIP
+Brokerage calculator
+Estimate charges for your trade/investment
+Margin calculator
+Estimate balance needed to buy/sell a stock
+SWP calculator
+Returns on your systematic withdrawal plan
+Pricing
+Brokerage and charges on Groww
+Blog
+Credit
+Loan against securities and Personal loan
++10.39
+%
+3Y annualised
+-1.20
+%
+1D
+1M
+6M
+1Y
+3Y
+5Y
+All
+NAV: 28 Sep '26
+₹551.04
+Min. for SIP
+₹100
+Fund size (AUM)
+₹1,07,295.79 Cr
+Expense ratio
+0.78%
+Rating
+5
+Return calculator
+Monthly SIP
+One time
+Monthly investment
+₹5,000
+Over the past
+Total investment
+Would've become
+Historic returns
+Returns
+1 year
+₹60,000
+₹58,710
+-2.15
+%
+3 years
+₹1,80,000
+₹1,88,098
++
+4.50
+%
+5 years
+₹3,00,000
+₹3,87,921
++
+29.31
+%
+10 years
+₹6,00,000
+₹12,39,454
++
+106.58
+%
+Holdings (
+326
+)
+Name
+Sector
+Instruments
+Assets
+ICICI Bank Ltd
+Financial
+Equity
+5.32%
+HDFC Bank Ltd
+Financial
+Equity
+4.13%
+Reliance Industries Ltd
+Energy & Utilities
+Equity
+3.74%
+State Bank of India
+Financial
+Equity
+3.46%
+Bharti Airtel Ltd
+Technology
+Equity
+2.93%
+Axis Bank Ltd
+Financial
+Equity
+2.68%
+Larsen & Toubro Ltd
+Industrials
+Equity
+2.59%
+GOI Sec 7.18 14/08/2033
+Entities
+GOI Securities
+1.99%
+NTPC Ltd
+Energy & Utilities
+Equity
+1.94%
+Zomato Ltd
+Technology
+Equity
+1.65%
+Coal India Ltd
+Materials
+Equity
+1.60%
+Infosys Ltd
+Technology
+Equity
+1.59%
+Sun Pharmaceutical Industries Ltd
+Healthcare
+Equity
+1.54%
+Kotak Mahindra Bank Ltd
+Financial
+Equity
+1.52%
+Maruti Suzuki India Ltd
+Consumer Discretionary
+Equity
+1.46%
+HCL Technologies Ltd
+Technology
+Equity
+1.24%
+Tata Consultancy Services Ltd
+Technology
+Equity
+1.20%
+Life Insurance Corporation of India
+Financial
+Equity
+1.18%
+Interglobe Aviation Ltd
+Industrials
+Equity
+1.18%
+Lupin Ltd
+Healthcare
+Equity
+1.16%
+ITC Ltd
+Consumer Staples
+Equity
+1.02%
+Mahindra & Mahindra Ltd
+Consumer Discretionary
+Equity
+0.87%
+SBI Life Insurance Company Ltd
+Financial
+Equity
+0.87%
+Hyundai Motor India Ltd.
+Consumer Discretionary
+Equity
+0.82%
+GAIL (India) Ltd
+Energy & Utilities
+Equity
+0.81%
+Embassy Office Parks REIT
+Real Estate
+Real Estate Investment Trusts
+0.80%
+Divi's Laboratories Ltd
+Healthcare
+Equity
+0.78%
+GOI Sec 7.18 24/07/2037
+Entities
+GOI Securities
+0.75%
+GOVERNMENT OF INDIA 34238 GOI 22AP64 7.34 FV RS 100
+Entities
+GOI Securities
+0.71%
+GOVERNMENT OF INDIA 34208 GOI 08AP34 7.1 FV RS 100
+Entities
+GOI Securities
+0.70%
+Bank Of Baroda
+Financial
+Equity
+0.67%
+Net Current Assets
+Unspecified
+Net Current Assets
+0.65%
+Tata Steel Ltd
+Materials
+Equity
+0.65%
+Apar Industries Ltd
+Diversified
+Equity
+0.63%
+Bharat Petroleum Corporation Ltd
+Energy & Utilities
+Equity
+0.63%
+Indusind Bank Ltd
+Financial
+Equity
+0.62%
+LIC HOUSING FINANCE LTD TR 447 7.57 NCD 18OT29 FVRS1LAC
+Financial
+Bonds/Debentures
+0.60%
+Hindustan Petroleum Corporation Ltd
+Energy & Utilities
+Equity
+0.60%
+Repo
+Unspecified
+Repo
+0.60%
+Power Finance Corporation Ltd
+Financial
+Equity
+0.58%
+STATE BANK OF INDIA SR 2 7.33 BD 20SP39 FVRS1CR
+Financial
+Bonds
+0.56%
+JSW Infrastructure Ltd
+Industrials
+Equity
+0.55%
+GOVERNMENT OF INDIA 35840 GOI 15AP65 6.9 FV RS 100
+Entities
+GOI Securities
+0.53%
+REC Ltd
+Financial
+Equity
+0.51%
+STATE BANK OF INDIA SR I 7.42 BD 29AG39 FVRS1CR
+Financial
+Debenture
+0.51%
+AU Small Finance Bank Ltd
+Financial
+Equity
+0.50%
+Brookfield India Real Estate Trust REIT
+Real Estate
+Real Estate Investment Trusts
+0.50%
+PIPELINE INFRASTRUCTURE LIMITED SR 3 7.96 NCD 11MR29 FVRS1LAC
+Industrials
+Debenture
+0.48%
+Jindal Steel & Power Ltd
+Materials
+Equity
+0.47%
+Cholamandalam Investment & Finance Company Ltd
+Financial
+Equity
+0.47%
+Ultratech Cement Ltd
+Materials
+Equity
+0.46%
+Ipca Laboratories Ltd
+Healthcare
+Equity
+0.46%
+Hindustan Aeronautics Ltd
+Industrials
+Equity
+0.44%
+Canara HSBC Life Insurance Company Ltd.
+Financial
+Equity
+0.43%
+Aurobindo Pharma Ltd
+Healthcare
+Equity
+0.43%
+Bajaj Auto Ltd
+Consumer Discretionary
+Equity
+0.43%
+TORRENT POWER LIMITED SR 15 TR D 8.20 NCD 24JU36 FVRS1LAC
+Energy & Utilities
+Non Convertible Debenture
+0.41%
+Kaynes Technology India Ltd
+Industrials
+Equity
+0.39%
+Britannia Industries Ltd
+Consumer Staples
+Equity
+0.39%
+Vishal Mega Mart Ltd.
+Consumer Staples
+Equity
+0.39%
+Techno Electric & Engineering Company Ltd
+Industrials
+Equity
+0.39%
+Dynamatic Technologies Ltd
+Consumer Discretionary
+Equity
+0.39%
+BEML Ltd
+Industrials
+Equity
+0.39%
+WeWork India Management Ltd.
+Industrials
+Equity
+0.39%
+Bajaj Finserv Ltd
+Financial
+Equity
+0.38%
+SMALL INDUSTRIES DEVELOPMENT BANK OF INDIA SR VII 7.42 BD 12MR29 FVRS1LAC
+Financial
+Bonds/NCDs
+0.37%
+Apollo Tyres Ltd
+Consumer Discretionary
+Equity
+0.37%
+Bharat Forge Ltd
+Consumer Discretionary
+Equity
+0.37%
+REC LIMITED SR 201B 6.90 BD 31MR31 FVRS10LAC
+Financial
+Debenture
+0.36%
+Gujarat Pipavav Port Ltd
+Industrials
+Equity
+0.36%
+SMALL INDUSTRIES DEVELOPMENT BANK OF INDIA SR V 7.83 BD 24NV28 FVRS1LAC
+Financial
+Debenture
+0.35%
+Five-Star Business Finance Ltd
+Financial
+Equity
+0.33%
+HDFC BANK LIMITED SR AA010 7.80 NCD 06SP32 FVRS10LAC
+Financial
+Debenture
+0.33%
+INDIAN RAILWAY FINANCE CORPORATION LIMITED SR 179 7.44 BD 13JU34 FVRS1LAC
+Financial
+Bonds
+0.32%
+STATE DEVELOPMENT LOAN 36823 GUJ 17DC34 7.27 FV RS 100
+Industrials
+State Development Loan
+0.32%
+Titagarh Wagons Ltd
+Industrials
+Equity
+0.32%
+HOUSING AND URBAN DEVELOPMENT CORPORATION LIMITED SR E 7.29 NCD 12FB35 FVRS1LAC
+Financial
+Non Convertible Debenture
+0.32%
+Hindustan Unilever Ltd
+Consumer Staples
+Equity
+0.31%
+BAJAJ FINANCE LIMITED 7.55 NCD 03AP35 FVRS1LAC
+Financial
+Bonds/NCDs
+0.31%
+Bosch Ltd
+Consumer Discretionary
+Equity
+0.31%
+Ambuja Cements Ltd
+Materials
+Equity
+0.31%
+Rubicon Research Ltd.
+Healthcare
+Equity
+0.30%
+United Spirits Ltd
+Consumer Staples
+Equity
+0.29%
+INVIT POWERGRID INFRASTRUCTURE INVESTMENT TRUST
+Industrials
+Infrastructure Investment Trust
+0.29%
+Savita Oil Technologies Ltd
+Materials
+Equity
+0.29%
+Mphasis Ltd
+Technology
+Equity
+0.28%
+Oil & Natural Gas Corporation Ltd
+Energy & Utilities
+Equity
+0.28%
+HEXAWARE TECHNOLOGIES LIMITED EQ NEW FV RS.2/-
+Technology
+Equity
+0.28%
+BAJAJ FINANCE LIMITED 7.82% NCD 31JN34 FVRS1LAC
+Financial
+Debenture
+0.28%
+ULTRATECH CEMENT LIMITED SR I 7.22 NCD 02FB29 FVRS1LAC
+Materials
+Non Convertible Debenture
+0.28%
+MUTHOOT FINANCE LIMITED RR NCD 04SP29 FVRS1LAC
+Financial
+Non Convertible Debenture
+0.28%
+HDFC BANK LIMITED SR US006 7.75 NCD 13JU33 FVRS1LAC
+Financial
+Debenture
+0.27%
+JAMNAGAR UTILITIES & POWER PRIVATE LIMITED SR PPD7 7.90 LOA 10AG28 FVRS1LAC
+Industrials
+Debenture
+0.27%
+Kalpataru Power Transmission Ltd
+Industrials
+Equity
+0.25%
+Bharat Dynamics Ltd
+Industrials
+Equity
+0.25%
+Mishra Dhatu Nigam Ltd
+Materials
+Equity
+0.25%
+Lakshmi Machine Works Ltd
+Industrials
+Equity
+0.24%
+GOVERNMENT OF INDIA 31909 GOI 22AG32 7.26 FV RS 100
+Entities
+GOI Securities
+0.24%
+Aavas Financiers Ltd
+Financial
+Equity
+0.24%
+Godrej Properties Ltd
+Real Estate
+Equity
+0.23%
+HDB FINANCIAL SERVICES LIMITED SR A/1 FX 198 7.988 LOA 08DC26 FVRS1LAC
+Financial
+Debenture
+0.23%
+LIC HOUSING FINANCE LTD TR 439 7.73 NCD 22MR34 FVRS 1LAC
+Financial
+Non Convertible Debenture
+0.23%
+NATIONAL BANK FOR AGRICULTURE AND RURAL DEVELOPMENT SR 25E 7.53 BD 24MR28 FVRS1LAC
+Financial
+Bonds
+0.23%
+BAJAJ HOUSING FINANCE LIMITED 7.66 NCD 20MR28 FVRS1LAC
+Financial
+Debenture
+0.23%
+BAJAJ HOUSING FINANCE LIMITED 7.89 NCD 14JL34 FVRS1LAC
+Financial
+Debenture
+0.23%
+BANK OF BARODA SR XXV 7.75 BD 21DC33 FVRS1CR
+Financial
+Bonds
+0.23%
+BAJAJ FINANCE LIMITED 7.57 NCD 03AP30 FVRS1LAC
+Financial
+Non Convertible Debenture
+0.23%
+PUNJAB NATIONAL BANK SR III 7.34 BD 14FB35 FVRS1LAC
+Financial
+Bonds
+0.23%
+Alkem Laboratories Ltd
+Healthcare
+Equity
+0.23%
+BANK OF BARODA CD 06JAN27
+Financial
+Certificate of Deposit
+0.23%
+J Kumar Infraprojects Ltd
+Industrials
+Equity
+0.23%
+INDIA UNIVERSAL TRUST AL1 SERIES A3 PTC 25SEP24
+Unspecified
+Securitised Debt
+0.21%
+NHPC Ltd
+Energy & Utilities
+Equity
+0.21%
+Trent Ltd
+Consumer Discretionary
+Equity
+0.21%
+Time Technoplast Ltd
+Materials
+Equity
+0.21%
+NATIONAL HOUSING BANK 7.35 BD 02JN32 FVRS1LAC
+Financial
+Bonds
+0.21%
+Glenmark Pharmaceuticals Ltd
+Healthcare
+Equity
+0.20%
+Billionbrains Garage Ventures Ltd.
+Financial
+Equity
+0.20%
+CHOLAMANDALAM INVESTMENT AND FINANCE COMPANY LIMITED SR SD72 9.10 NCD 27JU31 FVRS1LAC
+Financial
+Non Convertible Debenture
+0.19%
+Tech Mahindra Ltd
+Technology
+Equity
+0.19%
+STATE BANK OF INDIA SR I 7.81 BD 02NV38 FVRS1CR
+Financial
+Debenture
+0.19%
+INDIAN RAILWAY FINANCE CORPORATION LIMITED SR 175 7.57 BD 18AP29 FVRS1LAC
+Financial
+Non Convertible Debenture
+0.19%
+NATIONAL HOUSING BANK 7.59 BD 08SP27 FVRS1LAC
+Financial
+Non Convertible Debenture
+0.19%
+PCBL Ltd
+Materials
+Equity
+0.19%
+LIC HOUSING FINANCE LTD TR 446 7.65 NCD 19AG31 FVRS1LAC
+Financial
+Non Convertible Debenture
+0.18%
+SUNDARAM FINANCE LIMITED SR Z7 7.24 NCD 14FB28 FVRS1LAC
+Financial
+Debenture
+0.18%
+NATIONAL BANK FOR AGRICULTURE AND RURAL DEVELOPMENT SR 25D 7.40 BD 29AP30 FVRS1LAC
+Financial
+Bonds
+0.18%
+MAHANAGAR TELEPHONE NIGAM LIMITED. SR VIII TR C 7.80 BD 07NV33 FVRS1LAC
+Technology
+Non Convertible Debenture
+0.18%
+Tega Industries Ltd
+Industrials
+Equity
+0.18%
+STATE DEVELOPMENT LOAN 36288 MP 06AG43 7.22 FV RS 100
+Unspecified
+State Development Loan
+0.18%
+Ashoka Buildcon Ltd
+Industrials
+Equity
+0.18%
+Suven Pharmaceuticals Ltd
+Healthcare
+Equity
+0.18%
+CESC Ltd
+Energy & Utilities
+Equity
+0.17%
+Ashok Leyland Ltd
+Industrials
+Equity
+0.17%
+Tata Motors Ltd
+Industrials
+Equity
+0.17%
+Crompton Greaves Consumer Electricals Ltd
+Consumer Discretionary
+Equity
+0.16%
+CHOLAMANDALAM INVESTMENT AND FINANCE COMPANY LIMITED SR SD80 8.88 NCD 25JU33 FVRS1LAC
+Financial
+Non Convertible Debenture
+0.16%
+INDIAN RAILWAY FINANCE CORPORATION LIMITED SR 180 7.39 BD 15JL34 FVRS1LAC
+Financial
+Debenture
+0.16%
+Asian Paints Ltd
+Materials
+Equity
+0.16%
+7.35% RECL 31 JULY 2034
+Financial
+Bonds
+0.15%
+Garden Reach Shipbuilders & Engineers Ltd
+Industrials
+Equity
+0.15%
+NATIONAL BANK FOR AGRICULTURE AND RURAL DEVELOPMENT SR 24E 7.80 BD 15MR27 FVRS1LAC
+Financial
+Debenture
+0.15%
+STATE DEVELOPMENT LOAN 36290 MP 06AG48 7.22 FV RS 100
+Unspecified
+State Development Loan
+0.15%
+LIC HOUSING FINANCE LTD TR 438 7.8350 NCD 11MY27 FVRS1LAC
+Financial
+Debenture
+0.14%
+CG Power & Industrial Solutions Ltd
+Industrials
+Equity
+0.14%
+Shriram Transport Finance Company Ltd
+Financial
+Equity
+0.14%
+SMALL INDUSTRIES DEVELOPMENT BANK OF INDIA SR VI 7.79 BD 14MY27 FVRS1LAC
+Financial
+Debenture
+0.14%
+NATIONAL BANK FOR AGRICULTURE AND RURAL DEVELOPMENT SR 23I 7.62 LOA 31JN28 FVRS1LAC
+Financial
+Debenture
+0.14%
+Cipla Ltd
+Healthcare
+Equity
+0.14%
+LIC HOUSING FINANCE LTD TR 451 7.66 NCD 11DC29 FVRS 1LAC
+Financial
+Bonds
+0.14%
+MUTHOOT FINANCE LIMITED RR NCD 26JL29 FVRS1L

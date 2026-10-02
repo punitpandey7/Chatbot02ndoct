@@ -1,0 +1,807 @@
+Scheme: HDFC Small Cap Fund
+
+Structured page data:
+
+amc_code: HDFCMutualFund_MF
+amc_name: HDFC MUTUAL FUND
+bse_scheme_code: HDACG1G-GR
+scheme_name: HDFC SMALL CAP FUND - DIRECT PLAN - GROWTH OPTION
+scheme_type: EQUITY
+stp_in_minimum_installment_amount: 1000
+stp_out_minimum_installment_amount: 1000
+stp_minimum_installment_units: 9999999
+stp_minimum_installment_numbers: 6
+stp_minimum_gap: 30
+swp_minimum_installment_amount: 100
+swp_minimum_installment_units: 999999
+swp_minimum_installment_numbers: 6
+swp_minimum_gap: 30
+scheme_type: NORMAL
+sip_start_date_time: 2013-01-01T00:00:00
+sip_end_date_time: 2013-01-01T14:00:00
+scheme_type: NFO
+nfo_risk: Moderately High Riskometer
+meta_title: HDFC Small Cap Fund Direct Growth - Groww
+meta_desc: HDFC Small Cap Fund Direct Growth is Small Cap Equity mutual fund with risk-reward rating of 3/10. It has track record of 13 years, with three year return of 10.27. Risk is Very High
+scheme_code: 130503
+direct_scheme_code: 130503
+regular_search_id: hdfc-small-and-mid-cap-fund-growth
+scheme_name: HDFC Small Cap Fund Direct Growth
+search_id: hdfc-small-cap-fund-direct-growth
+min_investment_amount: 100
+fund_house: HDFC Mutual Fund
+fund_manager: Chirag Setalvad
+mini_additional_investment: 100
+sip_multiplier: 1
+category: Equity
+rta_scheme_code: HACG1G
+exit_load: Exit load of 1% if redeemed within 1 year
+sub_category: Small Cap
+description: The scheme seeks to provide long-term capital appreciation /income by investing predominantly in Small-Cap companies.
+benchmark: BSE 250 SmallCap TRI
+benchmark_name: BSE 250 SmallCap Total Return Index
+aum: 41890.8613
+expense_ratio: 0.78
+base_expense_ratio: 0.63
+super_category: HDFC Small Cap Fund
+min_sip_investment: 100
+max_sip_investment: 999999999
+min_withdrawal: 100
+analysis_desc: 3Y and 5Y annualised returns lower than category average
+analysis_subject: expense_analysis
+analysis_desc: Lower expense ratio: 0.78%
+analysis_desc: 1Y and 10Y annualised returns higher than category average
+analysis_subject: base_expense_analysis
+analysis_desc: Lower Base expense ratio: 0.63%
+amc_info name: HDFC Mutual Fund
+aum: 986236.84494707
+email: shareholders.relations@hdfcfund.com
+description: HDFC Mutual Fund started their mutual fund on 30/06/2000 and its managing total assets of ₹2,70,046 Cr. Its ranked at 2 as per total assets at end of 30th Sep 2017.
+vro_website: http://www.hdfcfund.com
+category_helper_text: Invests in stocks as per Contrarian investment strategy
+tax_impact: If you redeem within one year, returns are taxed at 20%. If you redeem after one year, returns exceeding Rs 1.25 lakh in a financial year are taxed at 12.5%.
+description: Contra funds follow Contrarian strategy which means investing in stocks in contrast to the prevailing sentiment. Minimum investment in equity is 65%.
+stats type: FUND_RETURN
+stats title: Fund Returns
+stats type: CATEGORY_AVG_RETURN
+stats title: Category Average
+stats type: RANK_WITHIN_CATEGORY
+stats title: Rank Within Category
+sharpe_ratio: 0.38
+sortino_ratio: 0.54
+information_ratio: -0.5
+nav: 157.255
+nav_date: 28-Sep-2026
+scheme_type: Growth
+scheme_name: HDFC Mid Cap Fund Direct Growth
+scheme_code: 118989
+search_id: hdfc-mid-cap-fund-direct-growth
+scheme_name: HDFC Retirement Fund Equity Plan Direct Growth
+scheme_code: 136094
+search_id: hdfc-retirement-fund-equity-plan-direct-growth
+scheme_name: HDFC Retirement Fund Hybrid Equity Plan Direct Growth
+scheme_code: 136464
+search_id: hdfc-retirement-fund-hybrid-equity-plan-direct-growth
+scheme_name: HDFC Retirement Fund Hybrid Debt Plan Direct Growth
+scheme_code: 136465
+search_id: hdfc-retirement-fund-hybrid-debt-plan-direct-growth
+scheme_name: HDFC Children's Fund Direct Plan
+scheme_code: 119066
+search_id: hdfc-children's-fund-direct-plan
+sid_url: https://www.hdfcfund.com
+amc_page_url: https://groww.in/mutual-funds/amc/hdfc-mutual-funds
+groww_scheme_code: INF179KA1RW5
+fund_name: HDFC Small Cap Fund
+search_id: bandhan-small-cap-fund-direct-growth
+aum: 34176.0243
+min_investment: 1000
+super_category: Bandhan Small Cap Fund
+scheme_name: Bandhan Small Cap Fund Direct Growth
+fund_manager: Anoop Bhaskar
+fund_house: IDFC Mutual Fund
+scheme_code: 147946
+direct_scheme_code: 147946
+groww_scheme_code: INF194KB1AL4
+expense_ratio: 0.6
+base_expense_ratio: 0.36
+fund_name: Bandhan Small Cap Fund
+search_id: iti-small-cap-fund-direct-growth
+aum: 3602.84751617
+min_investment: 5000
+super_category: ITI Small Cap Fund
+scheme_name: ITI Small Cap Fund Direct Growth
+fund_manager: Pradeep Gokhale
+fund_house: ITI Mutual Fund
+scheme_code: 147919
+direct_scheme_code: 147919
+min_sip_investment: 500
+groww_scheme_code: INF00XX01747
+expense_ratio: 0.86
+base_expense_ratio: 0.45
+fund_name: ITI Small Cap Fund
+search_id: invesco-india-small-cap-fund-direct-growth
+aum: 15744.4025
+min_investment: 100
+super_category: Invesco India Small Cap Fund
+scheme_name: Invesco India Small Cap Fund Direct Growth
+fund_manager: Taher Badshah
+fund_house: Invesco Mutual Fund
+scheme_code: 145137
+direct_scheme_code: 145137
+groww_scheme_code: INF205K013T3
+expense_ratio: 0.63
+base_expense_ratio: 0.41
+fund_name: Invesco India Small Cap Fund
+search_id: sundaram-smile-fund-direct-growth
+aum: 4155.3521741
+super_category: Sundaram Small Cap Fund
+scheme_name: Sundaram Small Cap Fund Direct Growth
+fund_manager: S Krishnakumar
+fund_house: Sundaram Mutual Fund
+scheme_code: 119589
+direct_scheme_code: 119589
+regular_search_id: sundaram-smile-fund-regular-growth
+groww_scheme_code: INF903J01NK9
+expense_ratio: 0.97
+base_expense_ratio: 0.72
+fund_name: Sundaram Small Cap Fund
+search_id: nippon-india-small-cap-fund-direct-growth
+aum: 82580.3063
+super_category: Nippon India Small Cap Fund
+scheme_name: Nippon India Small Cap Fund Direct Growth
+fund_manager: Samir Rachh, Dhrumil Shah
+fund_house: Nippon India Mutual Fund
+scheme_code: 118778
+direct_scheme_code: 118778
+regular_search_id: reliance-small-cap-fund-growth
+groww_scheme_code: INF204K01K15
+expense_ratio: 0.69
+base_expense_ratio: 0.52
+fund_name: Nippon India Small Cap Fund
+page: /mutual-funds/[searchId]
+searchId: hdfc-small-cap-fund-direct-growth
+
+Visible page text:
+
+HDFC Small Cap Fund Direct Growth - NAV, Mutual Fund Performance & Portfolio
+Stocks
+Invest in Stocks
+Invest in stocks, ETFs, IPOs with fast orders. Track returns on your stock holdings and view real-time P&L on your positions.
+Intraday
+Monitor top intraday performers in real time
+ETF Screener
+Get the best of Mutual Funds and flexibility of Stocks
+IPO
+Track upcoming and ongoing IPOs
+MTFs
+Buy now, pay later
+Stock Screener
+Filter based on RSI, PE ratio and more
+Stock Events
+Dividends, bonus, buybacks and more
+Demat Account
+Begin your stock market journey
+Share Market Today
+Live news updates from stock market
+F&O
+Trade in Futures & Options
+Trade in F&O using the terminal. View charts, indicators, track your orders , P&L and watchlists in a single space
+Indices
+Track markets across the globe
+Terminal
+Track charts, orders, positions, watchlists in one place
+Option chain
+Analyse chains, view payoffs, create baskets
+Pledge
+Get extra balance for trading
+Commodities
+Trade in Crude Oil, Gold, Silver and more
+API trading
+Set up and execute trades through our API
+Mutual Funds
+Invest in Mutual Funds
+Invest in direct mutual funds at zero charges via lump sump investments or SIPs
+Mutual Fund Houses
+Know about AMCs, funds, fund managers
+NFO’s
+Track all active NFOs in one place
+Mutual Funds by Groww
+Mutual funds by Groww designed for your investment goals
+Start SIP
+Build long-term wealth through disciplined monthly investing.
+Mutual Funds screener
+Filter funds based on risk, fund size and more
+Track Funds
+Import funds and track all investments in a single place
+Compare Funds
+More
+SIP calculator
+Estimate returns on a SIP
+Brokerage calculator
+Estimate charges for your trade/investment
+Margin calculator
+Estimate balance needed to buy/sell a stock
+SWP calculator
+Returns on your systematic withdrawal plan
+Pricing
+Brokerage and charges on Groww
+Blog
+Credit
+Loan against securities and Personal loan
++10.27
+%
+3Y annualised
+-1.60
+%
+1D
+1M
+6M
+1Y
+3Y
+5Y
+All
+NAV: 28 Sep '26
+₹157.26
+Min. for SIP
+₹100
+Fund size (AUM)
+₹41,890.86 Cr
+Expense ratio
+0.78%
+Rating
+3
+Return calculator
+Monthly SIP
+One time
+Monthly investment
+₹5,000
+Over the past
+Total investment
+Would've become
+Historic returns
+Returns
+1 year
+₹60,000
+₹60,575
++
+0.96
+%
+3 years
+₹1,80,000
+₹1,92,128
++
+6.74
+%
+5 years
+₹3,00,000
+₹4,08,030
++
+36.01
+%
+10 years
+₹6,00,000
+₹15,03,294
++
+150.55
+%
+Holdings (
+87
+)
+Name
+Sector
+Instruments
+Assets
+Repo
+Unspecified
+Repo
+10.25%
+Firstsource Solutions Ltd
+Industrials
+Equity
+3.71%
+Aster DM Healthcare Ltd
+Healthcare
+Equity
+3.56%
+Gabriel India Ltd
+Consumer Discretionary
+Equity
+3.25%
+eClerx Services Ltd
+Technology
+Equity
+3.09%
+Bank Of Baroda
+Financial
+Equity
+2.67%
+Indian Bank
+Financial
+Equity
+2.08%
+Krishna Institute Of Medical Sciences Ltd
+Healthcare
+Equity
+2.01%
+Eris Lifesciences Ltd
+Healthcare
+Equity
+2.00%
+Apar Industries Ltd
+Diversified
+Equity
+1.90%
+Pearl Global Industries Ltd
+Consumer Discretionary
+Equity
+1.77%
+The Federal Bank Ltd
+Financial
+Equity
+1.77%
+Sudarshan Chemical Industries Ltd
+Materials
+Equity
+1.75%
+Home First Finance Company India Ltd
+Financial
+Equity
+1.69%
+Vijaya Diagnostic Centre Ltd
+Healthcare
+Equity
+1.67%
+PVR Ltd
+Consumer Discretionary
+Equity
+1.66%
+Chalet Hotels Ltd
+Consumer Discretionary
+Equity
+1.63%
+Kalpataru Power Transmission Ltd
+Industrials
+Equity
+1.55%
+City Union Bank Ltd
+Financial
+Equity
+1.46%
+Suprajit Engineering Ltd
+Consumer Discretionary
+Equity
+1.42%
+The Great Eastern Shipping Company Ltd
+Energy & Utilities
+Equity
+1.41%
+Sonata Software Ltd
+Technology
+Equity
+1.40%
+Power Mech Projects Ltd
+Industrials
+Equity
+1.32%
+Akzo Nobel India Ltd
+Materials
+Equity
+1.32%
+Timken India Ltd
+Industrials
+Equity
+1.31%
+Vardhman Textiles Ltd
+Consumer Discretionary
+Equity
+1.28%
+Dodla Dairy Ltd
+Consumer Staples
+Equity
+1.28%
+Godrej Consumer Products Ltd
+Consumer Staples
+Equity
+1.27%
+Aditya Vision Ltd
+Consumer Discretionary
+Equity
+1.26%
+Blue Dart Express Ltd
+Industrials
+Equity
+1.22%
+Equitas Small Finance Bank Ltd
+Financial
+Equity
+1.20%
+Redington Ltd
+Technology
+Equity
+1.16%
+LG Balakrishnan & Brothers Ltd
+Industrials
+Equity
+1.12%
+Fiem Industries Ltd
+Consumer Discretionary
+Equity
+1.10%
+JK Tyre & Industries Ltd
+Consumer Discretionary
+Equity
+1.09%
+Fortis Healthcare Ltd
+Healthcare
+Equity
+1.08%
+Vishal Mega Mart Ltd.
+Consumer Staples
+Equity
+1.08%
+Voltamp Transformers Ltd
+Industrials
+Equity
+1.05%
+VRL Logistics Ltd
+Industrials
+Equity
+1.04%
+Indigo Paints Ltd
+Materials
+Equity
+1.03%
+Mahindra CIE Automotive Ltd
+Consumer Discretionary
+Equity
+1.01%
+Sharda Cropchem Ltd
+Materials
+Equity
+1.00%
+Transport Corporation Of India Ltd
+Industrials
+Equity
+0.99%
+NRB Bearings Ltd
+Industrials
+Equity
+0.97%
+Zensar Technologies Ltd
+Technology
+Equity
+0.93%
+Shoppers Stop Ltd
+Consumer Discretionary
+Equity
+0.92%
+Lumax Industries Ltd
+Consumer Discretionary
+Equity
+0.90%
+Tega Industries Ltd
+Industrials
+Equity
+0.88%
+UTI Asset Management Company Ltd
+Financial
+Equity
+0.87%
+Kirloskar Ferrous Industries Ltd
+Materials
+Equity
+0.85%
+Chambal Fertilisers & Chemicals Ltd
+Materials
+Equity
+0.84%
+SKF India (Industrial) Ltd
+Industrials
+Equity
+0.79%
+Tata Steel Ltd
+Materials
+Equity
+0.68%
+Mastek Ltd
+Technology
+Equity
+0.66%
+Unichem Laboratories Ltd
+Healthcare
+Equity
+0.66%
+Redtape Ltd
+Consumer Discretionary
+Equity
+0.66%
+The Anup Engineering Ltd
+Industrials
+Equity
+0.63%
+DHFL VYSYA HOUSING FINANCE LIMITED EQ
+Financial
+Equity
+0.63%
+Bajaj Consumer Care Ltd
+Consumer Staples
+Equity
+0.59%
+PNC Infratech Ltd
+Industrials
+Equity
+0.59%
+Wakefit Innovations Ltd.
+Consumer Discretionary
+Equity
+0.56%
+GMM Pfaudler Ltd
+Industrials
+Equity
+0.53%
+Bajaj Electricals Ltd
+Consumer Discretionary
+Equity
+0.49%
+KEC International Ltd
+Diversified
+Equity
+0.49%
+Gateway Distriparks Ltd
+Industrials
+Equity
+0.43%
+GNA Axles Ltd
+Consumer Discretionary
+Equity
+0.42%
+Ion Exchange (India) Ltd
+Industrials
+Equity
+0.42%
+SKF India Ltd
+Industrials
+Equity
+0.41%
+Kei Industries Ltd
+Industrials
+Equity
+0.41%
+Awfis Space Solutions Ltd.
+Industrials
+Equity
+0.41%
+La Opala RG Ltd
+Consumer Discretionary
+Equity
+0.38%
+Insecticides (India) Ltd
+Materials
+Equity
+0.38%
+Vesuvius India Ltd
+Industrials
+Equity
+0.38%
+Vedant Fashions Ltd
+Consumer Discretionary
+Equity
+0.37%
+Gujarat Pipavav Port Ltd
+Industrials
+Equity
+0.35%
+IFGL Refractories Ltd
+Industrials
+Equity
+0.33%
+G R Infraprojects Ltd
+Industrials
+Equity
+0.31%
+Jupiter Life Line Hospitals Ltd.
+Healthcare
+Equity
+0.30%
+Emami Ltd
+Consumer Staples
+Equity
+0.29%
+DB Corp Ltd
+Industrials
+Equity
+0.22%
+Goodyear India Ltd
+Consumer Discretionary
+Equity
+0.22%
+Sula Vineyards Ltd
+Consumer Staples
+Equity
+0.21%
+Brainbees Solutions Ltd.
+Consumer Discretionary
+Equity
+0.20%
+BEML Ltd
+Industrials
+Equity
+0.19%
+Carborundum Universal Ltd
+Materials
+Equity
+0.17%
+Net Current Assets
+Unspecified
+Net Current Assets
+0.11%
+TCI Express Ltd
+Industrials
+Equity
+0.06%
+See All
+Minimum investments
+Min. for 1st investment
+₹100
+Min. for 2nd investment
+₹100
+Min. for SIP
+₹100
+Understand terms
+Annualised returns
+Average of the yearly returns of a mutual fund over a given period.
+Absolute returns
+The total return of a mutual fund over a given period.
+Returns and rankings
+Annualised returns
+Absolute returns
+Name
+3Y
+5Y
+10Y
+All
+Fund returns
++10.3%
++14.4%
++17.1%
++18.1%
+Category average (
+Equity Small Cap
+)
++16.8%
++16.4%
++17.8%
++20.4%
+Rank (
+Equity Small Cap
+)
+34
+18
+5
+--
+Understand terms
+Expense ratio
+A fee payable to a mutual fund house for managing your mutual fund investments.     It is the total percentage of a company's fund assets used for administrative, management, advertising, and other expenses.
+Tax
+A percentage of your capital gains payable to the government upon exiting your mutual fund investments.     Taxation is categorized as long-term capital gains (LTCG) and short-term capital gains (STCG) depending on your holding period and the type of fund.
+Exit load
+A fee payable to a mutual fund house for exiting a fund (fully or partially) before the completion of a specified period from the date of investment.
+Stamp duty
+A form of tax payable for the purchase or sale of an asset or security.
+Exit Load
+08 May 2015
+Exit load of 1% if redeemed within 1 year
+18 Dec 2014
+Exit load of 2% if redeemed within 12 months, 1% if redeemed after 12 months but within 24 months and 0.50% if redeemed after 24 months but within 36 months
+01 Jul 2014
+Exit load of 2% if redeemed within 12 months and 1% if redeemed after 12 months but before 18 months
+01 Jan 2013
+Exit load of 1% if redeemed within 1 year
+Exit load, stamp duty and tax
+Exit load
+Exit load of 1% if redeemed within 1 year
+Stamp duty on investment:
+0.005% (from July 1st, 2020)
+from July 1st 2020
+Tax implication
+If you redeem within one year, returns are taxed at 20%. If you redeem after one year, returns exceeding Rs 1.25 lakh in a financial year are taxed at 12.5%.
+Check past data
+Compare similar funds
+Name
+1Y
+3Y
+Fund Size(Cr)
+Bandhan Small Cap Fund Direct Growth
++12.83%
++24.09%
+34,176.02
+ITI Small Cap Fund Direct Growth
++22.22%
++23.94%
+3,602.84
+Invesco India Small Cap Fund Direct Growth
++17.70%
++22.53%
+15,744.40
+Sundaram Small Cap Fund Direct Growth
++15.30%
++16.23%
+4,155.35
+Nippon India Small Cap Fund Direct Growth
++9.67%
++14.74%
+82,580.30
+Compare
+Fund management
+DM
+Dhruv Muchhal
+Jun 2023
+- Present
+View details
+Education
+Mr. Dhruv has done B.Com, CA and CFA
+Experience
+Prior to joining HDFC MF,he has worked with Motilal Oswal Financial Services Ltd., Goldman Sachs, CRISIL Global Research & Analytics and Deloitte Haskins & Sells
+Also manages these schemes
+HDFC Flexi Cap Direct Plan Growth
+HDFC Value Fund Direct Plan Growth
+HDFC Ultra Short to Short Term Fund Direct Growth
+HDFC Focused Fund Direct Growth
+HDFC Floating Interest Rates Fund Direct Plan Growth
+HDFC Balanced Advantage Fund Direct Growth
+HDFC Dynamic Term Fund Direct Plan Growth
+HDFC Medium Term Fund Direct Growth
+HDFC Medium to Long Term Fund Direct Growth
+HDFC Infrastructure Fund Direct Growth
+HDFC Corporate Bond Fund Direct Plan Growth
+HDFC Conservative Hybrid Fund Direct Growth
+HDFC Mid Cap Fund Direct Growth
+HDFC Equity Savings Direct Plan Growth
+HDFC Multi Asset Allocation Fund Direct Growth
+HDFC Aggressive Hybrid Fund Direct Plan Growth
+HDFC Short Term Fund Direct Plan Growth
+HDFC ELSS Tax Saver Fund Direct Plan Growth
+HDFC Large Cap Fund Direct Growth
+HDFC Credit Risk Fund Direct Growth
+HDFC Banking and PSU Debt Fund Direct Growth
+HDFC Arbitrage Fund Direct Growth
+HDFC Large & Mid Cap Fund Direct Growth
+HDFC Small Cap Fund Direct Growth
+HDFC Ultra Short Term Fund Direct Growth
+HDFC Liquid Direct Plan Growth
+HDFC Overnight Fund Direct Growth
+HDFC Money Market Fund Direct Growth
+HDFC Housing Opportunities Fund Direct Growth
+HDFC Banking & Financial Services Fund Direct Growth
+HDFC Multi Cap Fund Direct Growth
+HDFC Business Cycle Fund Direct Growth
+HDFC Long Term Fund Direct Growth
+HDFC MNC Fund Direct Growth
+HDFC Defence Fund Direct Growth
+HDFC Consumption Fund Direct Growth
+HDFC Transportation and Logistics Fund Direct Growth
+HDFC Technology Fund Direct Growth
+HDFC Pharma And Healthcare Fund Direct Growth
+HDFC Manufacturing Fund Direct Growth
+HDFC Children's Fund Direct Plan
+HDFC Innovation Fund Direct Growth
+CS
+Chirag Setalvad
+Jun 2014
+- Present
+View details
+Education
+Mr. Setalvad is a B. Sc and MBA from University of North Carolina.
+Experience
+Prior to joining HDFC AMC he has worked with New Vernon Advisory Services Ltd., HDFC AMC and ING Barings N.V.
+Also manages these schemes
+HDFC Mid Cap Fund Direct Growth
+HDFC Small Cap Fund Direct Growth
+HDFC Retirement Fund Equity Plan Direct Growth
+HDFC Retirement Fund Hybrid Equity Plan Direct Growth
+HDFC Retirement Fund Hybrid Debt Plan Direct Growth
+HDFC Children's Fund Direct Plan
+About
+HDFC Small Cap Fund Direct Growth
+HDFC Small Cap Fund Direct Growth is a Equity Mutual Fund Scheme launched by HDFC Mutual Fund. This scheme was made available to investors on 10 Dec 1999. Dhruv Muchhal is the Current Fund Manager of HDFC Small Cap Fund Direct Growth fund. The fund currently has an Asset Under Management(AUM) of ₹9,86,237 Cr and the Latest NAV as of 28 Sep 2026 is ₹157.26.
+The HDFC Small Ca

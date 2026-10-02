@@ -1,0 +1,38 @@
+persistent: yes (chromadb PersistentClient)
+path: D:\New folder\data\chroma
+collection: hdfc_mf_faq
+count: 239
+populated: True
+
+Restarting the app does NOT re-embed. Delete this folder or pass
+--rebuild on ingest to wipe vectors.
+
+----- sample 1 -----
+id: 5e36ffc6fb3b-1
+scheme: HDFC Large Cap Fund
+url: https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth
+preview: HDFC Large Cap Fund Scheme: HDFC Large Cap Fund  Structured page data: amc_code: HDFCMutualFund_MF amc_name: HDFC MUTUAL
+
+----- sample 2 -----
+id: 5e36ffc6fb3b-2
+scheme: HDFC Large Cap Fund
+url: https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth
+preview: 99999 swp_minimum_installment_numbers: 6 swp_minimum_gap: 30 scheme_type: NORMAL sip_start_date_time: 2013-01-01T00:00:0
+
+----- sample 3 -----
+id: 5e36ffc6fb3b-3
+scheme: HDFC Large Cap Fund
+url: https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth
+preview: 119018 direct_scheme_code: 119018 scheme_name: HDFC Large Cap Fund Direct Growth search_id: hdfc-large-cap-fund-direct-g
+
+----- sample 4 -----
+id: 5e36ffc6fb3b-4
+scheme: HDFC Large Cap Fund
+url: https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth
+preview: companies. benchmark: NIFTY 100 TRI benchmark_name: NIFTY 100 Total Return Index aum: 39933.3663 expense_ratio: 1.03 bas
+
+----- sample 5 -----
+id: 5e36ffc6fb3b-5
+scheme: HDFC Large Cap Fund
+url: https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth
+preview: r Base expense ratio: 0.84% amc_info name: HDFC Mutual Fund aum: 986236.84494707 email: shareholders.relations@hdfcfund.

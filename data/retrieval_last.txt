@@ -1,0 +1,74 @@
+question: ELSS lock-in HDFC
+filter: {'scheme_name': 'HDFC ELSS Tax Saver Fund'}
+hits: 4
+
+----- hit 1 -----
+id: 7ade57713022-8
+distance: 0.5477743148803711
+scheme: HDFC ELSS Tax Saver Fund
+url: https://groww.in/mutual-funds/hdfc-elss-tax-saver-fund-direct-plan-growth
+doc_type: scheme_page
+fetched: 2026-09-29
+text:
+s at HDFC MF.
+scheme_name: HDFC Multi Cap Fund Direct Growth
+scheme_code: 149368 search_id: hdfc-multi-cap-fund-direct-growth
+sid_url: https://www.hdfcfund.com
+amc_page_url: https://groww.in/mutual-funds/amc/hdfc-mutual-funds
+groww_scheme_code: INF179K01YS4
+lock_in years: 3
+lock_in months: 0
+lock_in days: 0
+lock_in_yrs: 3
+fund_name: HDFC ELSS - Tax Saver Fund
+page: /mutual-funds/[searchId]
+searchId: hdfc-elss-tax-saver-fund-direct-plan-growth
+
+----- hit 2 -----
+id: 7ade57713022-0
+distance: 0.5651192665100098
+scheme: HDFC ELSS Tax Saver Fund
+url: https://groww.in/mutual-funds/hdfc-elss-tax-saver-fund-direct-plan-growth
+doc_type: scheme_page
+fetched: 2026-09-29
+text:
+HDFC ELSS Tax Saver Fund
+Scheme: HDFC ELSS Tax Saver Fund
+
+Structured page data:
+
+----- hit 3 -----
+id: 7ade57713022-30
+distance: 0.577943742275238
+scheme: HDFC ELSS Tax Saver Fund
+url: https://groww.in/mutual-funds/hdfc-elss-tax-saver-fund-direct-plan-growth
+doc_type: scheme_page
+fetched: 2026-09-29
+text:
+Innovation Fund Direct Growth
+About
+HDFC ELSS Tax Saver Fund Direct Plan Growth HDFC ELSS Tax Saver Fund Direct Plan Growth is a Equity Mutual Fund Scheme launched by HDFC Mutual Fund. This scheme was made available to investors on 10 Dec 1999. Amar Kalkundrikar is the Current Fund Manager of HDFC ELSS Tax Saver Fund Direct Plan Growth fund. The fund currently has an Asset Under Management(AUM) of ₹9,86,237 Cr and the Latest NAV as of 28 Sep 2026 is ₹1,426.93.
+
+----- hit 4 -----
+id: 7ade57713022-10
+distance: 0.5998052954673767
+scheme: HDFC ELSS Tax Saver Fund
+url: https://groww.in/mutual-funds/hdfc-elss-tax-saver-fund-direct-plan-growth
+doc_type: scheme_page
+fetched: 2026-09-29
+text:
+Visible page text: HDFC ELSS Tax Saver Fund Direct Plan Growth - NAV, Mutual Fund Performance & Portfolio
+Stocks
+Invest in Stocks
+Invest in stocks, ETFs, IPOs with fast orders. Track returns on your stock holdings and view real-time P&L on your positions.
+Intraday
+Monitor top intraday performers in real time
+ETF Screener
+Get the best of Mutual Funds and flexibility of Stocks
+IPO
+Track upcoming and ongoing IPOs
+MTFs
+Buy now, pay later
+Stock Screener
+Filter based on RSI, PE ratio and more
+Stock Events

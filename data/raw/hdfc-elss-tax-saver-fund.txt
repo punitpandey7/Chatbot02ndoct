@@ -1,0 +1,738 @@
+Scheme: HDFC ELSS Tax Saver Fund
+
+Structured page data:
+
+amc_code: HDFCMutualFund_MF
+amc_name: HDFC MUTUAL FUND
+bse_scheme_code: 32T-GR
+scheme_name: HDFC ELSS - TAX SAVER FUND - DIRECT PLAN - GROWTH OPTION
+scheme_type: ELSS
+stp_in_minimum_installment_amount: 500
+stp_out_minimum_installment_amount: 500
+stp_minimum_installment_units: 9999999
+stp_minimum_installment_numbers: 6
+stp_minimum_gap: 0
+swp_minimum_installment_amount: 100
+swp_minimum_installment_units: 999999
+swp_minimum_installment_numbers: 6
+swp_minimum_gap: 0
+scheme_type: NORMAL
+sip_start_date_time: 2013-01-01T00:00:00
+sip_end_date_time: 2013-01-01T14:00:00
+scheme_type: NFO
+meta_title: HDFC ELSS Tax Saver Fund Direct Plan Growth - Groww
+meta_desc: HDFC ELSS Tax Saver Fund Direct Plan Growth is ELSS Equity mutual fund with risk-reward rating of 5/10. It has track record of 13 years, with three year return of 11.93. Risk is Very High
+scheme_code: 119060
+direct_scheme_code: 119060
+regular_search_id: hdfc-taxsaver-growth
+scheme_name: HDFC ELSS Tax Saver Fund Direct Plan Growth
+search_id: hdfc-elss-tax-saver-fund-direct-plan-growth
+min_investment_amount: 500
+fund_house: HDFC Mutual Fund
+fund_manager: Vinay Kulkarni
+mini_additional_investment: 500
+sip_multiplier: 500
+category: Equity
+rta_scheme_code: H32T
+exit_load: Nil
+sub_category: ELSS
+description: The scheme seeks to generate capital appreciation / income from a portfolio, comprising predominantly of equity & equity related instruments.
+benchmark: NIFTY 500 TRI
+benchmark_name: NIFTY 500 Total Return Index
+aum: 15991.7823
+expense_ratio: 1.21
+base_expense_ratio: 0.97
+super_category: HDFC ELSS - Tax Saver Fund
+min_sip_investment: 500
+max_sip_investment: 999999999
+min_withdrawal: 500
+analysis_desc: Consistently lower annualised returns than category average for the past 1Y, 3Y, 5Y and 10Y
+analysis_subject: exit_load
+analysis_subject: lock_in
+analysis_subject: expense_analysis
+analysis_desc: Lower expense ratio: 1.21%
+analysis_desc: Higher alpha: 3.28 
+The fund has generated returns higher than benchmark - NIFTY 500 Total Return Index - in the last 3Y
+analysis_subject: base_expense_analysis
+analysis_desc: Lower Base expense ratio: 0.97%
+amc_info name: HDFC Mutual Fund
+aum: 986236.84494707
+email: shareholders.relations@hdfcfund.com
+description: HDFC Mutual Fund started their mutual fund on 30/06/2000 and its managing total assets of ₹2,70,046 Cr. Its ranked at 2 as per total assets at end of 30th Sep 2017.
+vro_website: http://www.hdfcfund.com
+category_helper_text: Invests in stocks as per Contrarian investment strategy
+tax_impact: If you redeem within one year, returns are taxed at 20%. If you redeem after one year, returns exceeding Rs 1.25 lakh in a financial year are taxed at 12.5%.
+description: Contra funds follow Contrarian strategy which means investing in stocks in contrast to the prevailing sentiment. Minimum investment in equity is 65%.
+stats type: FUND_RETURN
+stats title: Fund Returns
+stats type: CATEGORY_AVG_RETURN
+stats title: Category Average
+stats type: RANK_WITHIN_CATEGORY
+stats title: Rank Within Category
+sharpe_ratio: 0.68
+sortino_ratio: 0.84
+information_ratio: 0.56
+nav: 1426.928
+nav_date: 28-Sep-2026
+scheme_type: Growth
+experience: Prior to joining HDFC Asset Management Company Limited, he has worked with Nippon India Mutual Fund, and HDFC AMC. He worked with multiple roles at HDFC MF.
+scheme_name: HDFC Multi Cap Fund Direct Growth
+scheme_code: 149368
+search_id: hdfc-multi-cap-fund-direct-growth
+sid_url: https://www.hdfcfund.com
+amc_page_url: https://groww.in/mutual-funds/amc/hdfc-mutual-funds
+groww_scheme_code: INF179K01YS4
+lock_in years: 3
+lock_in months: 0
+lock_in days: 0
+lock_in_yrs: 3
+fund_name: HDFC ELSS - Tax Saver Fund
+page: /mutual-funds/[searchId]
+searchId: hdfc-elss-tax-saver-fund-direct-plan-growth
+
+Visible page text:
+
+HDFC ELSS Tax Saver Fund Direct Plan Growth - NAV, Mutual Fund Performance & Portfolio
+Stocks
+Invest in Stocks
+Invest in stocks, ETFs, IPOs with fast orders. Track returns on your stock holdings and view real-time P&L on your positions.
+Intraday
+Monitor top intraday performers in real time
+ETF Screener
+Get the best of Mutual Funds and flexibility of Stocks
+IPO
+Track upcoming and ongoing IPOs
+MTFs
+Buy now, pay later
+Stock Screener
+Filter based on RSI, PE ratio and more
+Stock Events
+Dividends, bonus, buybacks and more
+Demat Account
+Begin your stock market journey
+Share Market Today
+Live news updates from stock market
+F&O
+Trade in Futures & Options
+Trade in F&O using the terminal. View charts, indicators, track your orders , P&L and watchlists in a single space
+Indices
+Track markets across the globe
+Terminal
+Track charts, orders, positions, watchlists in one place
+Option chain
+Analyse chains, view payoffs, create baskets
+Pledge
+Get extra balance for trading
+Commodities
+Trade in Crude Oil, Gold, Silver and more
+API trading
+Set up and execute trades through our API
+Mutual Funds
+Invest in Mutual Funds
+Invest in direct mutual funds at zero charges via lump sump investments or SIPs
+Mutual Fund Houses
+Know about AMCs, funds, fund managers
+NFO’s
+Track all active NFOs in one place
+Mutual Funds by Groww
+Mutual funds by Groww designed for your investment goals
+Start SIP
+Build long-term wealth through disciplined monthly investing.
+Mutual Funds screener
+Filter funds based on risk, fund size and more
+Track Funds
+Import funds and track all investments in a single place
+Compare Funds
+More
+SIP calculator
+Estimate returns on a SIP
+Brokerage calculator
+Estimate charges for your trade/investment
+Margin calculator
+Estimate balance needed to buy/sell a stock
+SWP calculator
+Returns on your systematic withdrawal plan
+Pricing
+Brokerage and charges on Groww
+Blog
+Credit
+Loan against securities and Personal loan
++11.93
+%
+3Y annualised
+-1.41
+%
+1D
+1M
+6M
+1Y
+3Y
+5Y
+All
+NAV: 28 Sep '26
+₹1,426.93
+Min. for SIP
+₹500
+Fund size (AUM)
+₹15,991.78 Cr
+Expense ratio
+1.21%
+Rating
+5
+Return calculator
+Monthly SIP
+One time
+Monthly investment
+₹5,000
+Over the past
+Total investment
+Would've become
+Historic returns
+Returns
+1 year
+₹60,000
+₹57,266
+-4.56
+%
+3 years
+₹1,80,000
+₹1,85,328
++
+2.96
+%
+5 years
+₹3,00,000
+₹3,88,389
++
+29.46
+%
+10 years
+₹6,00,000
+₹12,09,718
++
+101.62
+%
+Holdings (
+65
+)
+Name
+Sector
+Instruments
+Assets
+ICICI Bank Ltd
+Financial
+Equity
+9.32%
+HDFC Bank Ltd
+Financial
+Equity
+7.36%
+Axis Bank Ltd
+Financial
+Equity
+6.50%
+Maruti Suzuki India Ltd
+Consumer Discretionary
+Equity
+4.66%
+State Bank of India
+Financial
+Equity
+4.64%
+Kotak Mahindra Bank Ltd
+Financial
+Equity
+4.59%
+Bharti Airtel Ltd
+Technology
+Equity
+4.29%
+SBI Life Insurance Company Ltd
+Financial
+Equity
+3.25%
+HCL Technologies Ltd
+Technology
+Equity
+2.93%
+Hyundai Motor India Ltd.
+Consumer Discretionary
+Equity
+2.76%
+Reliance Industries Ltd
+Energy & Utilities
+Equity
+2.66%
+Zomato Ltd
+Technology
+Equity
+2.31%
+Bajaj Auto Ltd
+Consumer Discretionary
+Equity
+1.96%
+Tata Steel Ltd
+Materials
+Equity
+1.73%
+Britannia Industries Ltd
+Consumer Staples
+Equity
+1.72%
+Larsen & Toubro Ltd
+Industrials
+Equity
+1.60%
+Apollo Hospitals Enterprise Ltd
+Healthcare
+Equity
+1.53%
+JSW Steel Ltd
+Materials
+Equity
+1.51%
+Bosch Ltd
+Consumer Discretionary
+Equity
+1.41%
+Dr. Lal Pathlabs Ltd
+Healthcare
+Equity
+1.38%
+PB Fintech Ltd
+Financial
+Equity
+1.35%
+Interglobe Aviation Ltd
+Industrials
+Equity
+1.34%
+Karur Vysya Bank Ltd
+Financial
+Equity
+1.30%
+Jubilant FoodWorks Ltd
+Consumer Discretionary
+Equity
+1.23%
+Metropolis Healthcare Ltd
+Healthcare
+Equity
+1.17%
+Alkem Laboratories Ltd
+Healthcare
+Equity
+1.17%
+Infosys Ltd
+Technology
+Equity
+1.17%
+Hindustan Aeronautics Ltd
+Industrials
+Equity
+1.13%
+Cipla Ltd
+Healthcare
+Equity
+1.09%
+Star Health & Allied Insurance Co. Ltd
+Financial
+Equity
+1.07%
+Mphasis Ltd
+Technology
+Equity
+1.06%
+United Spirits Ltd
+Consumer Staples
+Equity
+1.06%
+Power Grid Corporation of India Ltd
+Energy & Utilities
+Equity
+1.03%
+Repo
+Unspecified
+Repo
+1.03%
+ICICI Lombard General Insurance Company Ltd
+Financial
+Equity
+1.02%
+Tech Mahindra Ltd
+Technology
+Equity
+1.02%
+Lupin Ltd
+Healthcare
+Equity
+0.96%
+ICICI Prudential Asset Management Company Ltd.
+Financial
+Equity
+0.96%
+Eicher Motors Ltd
+Consumer Discretionary
+Equity
+0.90%
+JSW Energy Ltd
+Energy & Utilities
+Equity
+0.87%
+Havells India Ltd
+Consumer Discretionary
+Equity
+0.83%
+Chalet Hotels Ltd
+Consumer Discretionary
+Equity
+0.81%
+Hindustan Unilever Ltd
+Consumer Staples
+Equity
+0.74%
+Godrej Consumer Products Ltd
+Consumer Staples
+Equity
+0.74%
+IIFL Wealth Management Ltd
+Financial
+Equity
+0.73%
+Mahindra & Mahindra Ltd
+Consumer Discretionary
+Equity
+0.72%
+Birla Corporation Ltd
+Materials
+Equity
+0.55%
+Westlife Development Ltd
+Consumer Discretionary
+Equity
+0.53%
+Life Insurance Corporation of India
+Financial
+Equity
+0.52%
+Bharat Electronics Ltd
+Industrials
+Equity
+0.47%
+The Ramco Cements Ltd
+Materials
+Equity
+0.44%
+Cyient Ltd
+Technology
+Equity
+0.44%
+Suven Pharmaceuticals Ltd
+Healthcare
+Equity
+0.41%
+TeamLease Services Ltd
+Industrials
+Equity
+0.33%
+GOVERNMENT OF INDIA 31719 GOI 20JU27 7.38 FV RS 100
+Entities
+GOI Securities
+0.32%
+Popular Vehicles And Services Ltd.
+Consumer Discretionary
+Equity
+0.32%
+Anthem Biosciences Ltd.
+Healthcare
+Equity
+0.28%
+Rubicon Research Ltd.
+Healthcare
+Equity
+0.25%
+Tata Motors Ltd
+Industrials
+Equity
+0.18%
+Bajaj Electricals Ltd
+Consumer Discretionary
+Equity
+0.13%
+JK Lakshmi Cement Ltd
+Materials
+Equity
+0.13%
+SBI Funds Management Ltd
+Financial
+Equity
+0.06%
+Medi Assist Healthcare Services Ltd.
+Industrials
+Equity
+0.04%
+Escorts Kubota Ltd
+Industrials
+Equity
+0.03%
+Net Payables
+Unspecified
+Net Payables
+-0.04%
+See All
+Minimum investments
+Min. for 1st investment
+₹500
+Min. for 2nd investment
+₹500
+Min. for SIP
+₹500
+Understand terms
+Annualised returns
+Average of the yearly returns of a mutual fund over a given period.
+Absolute returns
+The total return of a mutual fund over a given period.
+Returns and rankings
+Annualised returns
+Absolute returns
+Name
+3Y
+5Y
+10Y
+All
+Fund returns
++11.9%
++13.2%
++12.7%
++13.6%
+Category average (
+Equity ELSS
+)
++11.4%
++10.4%
++13.2%
++17.1%
+Rank (
+Equity ELSS
+)
+10
+5
+17
+--
+Understand terms
+Expense ratio
+A fee payable to a mutual fund house for managing your mutual fund investments.     It is the total percentage of a company's fund assets used for administrative, management, advertising, and other expenses.
+Tax
+A percentage of your capital gains payable to the government upon exiting your mutual fund investments.     Taxation is categorized as long-term capital gains (LTCG) and short-term capital gains (STCG) depending on your holding period and the type of fund.
+Exit load
+A fee payable to a mutual fund house for exiting a fund (fully or partially) before the completion of a specified period from the date of investment.
+Stamp duty
+A form of tax payable for the purchase or sale of an asset or security.
+Exit Load
+01 Jan 2013
+--
+Exit load, stamp duty and tax
+Exit load
+Nil
+Stamp duty on investment:
+0.005% (from July 1st, 2020)
+from July 1st 2020
+Tax implication
+If you redeem within one year, returns are taxed at 20%. If you redeem after one year, returns exceeding Rs 1.25 lakh in a financial year are taxed at 12.5%.
+Check past data
+Fund management
+AK
+Amar Kalkundrikar
+Dec 2025
+- Present
+View details
+Education
+Mr. Kalkundrikar has done B.Com, CA, CFA, and MBA from Columbia Business School.
+Experience
+Prior to joining HDFC Asset Management Company Limited, he has worked with Nippon India Mutual Fund, and HDFC AMC. He worked with multiple roles at HDFC MF.
+Also manages these schemes
+HDFC ELSS Tax Saver Fund Direct Plan Growth
+HDFC Multi Cap Fund Direct Growth
+DM
+Dhruv Muchhal
+Jun 2023
+- Present
+View details
+Education
+Mr. Dhruv has done B.Com, CA and CFA
+Experience
+Prior to joining HDFC MF,he has worked with Motilal Oswal Financial Services Ltd., Goldman Sachs, CRISIL Global Research & Analytics and Deloitte Haskins & Sells
+Also manages these schemes
+HDFC Flexi Cap Direct Plan Growth
+HDFC Value Fund Direct Plan Growth
+HDFC Ultra Short to Short Term Fund Direct Growth
+HDFC Focused Fund Direct Growth
+HDFC Floating Interest Rates Fund Direct Plan Growth
+HDFC Balanced Advantage Fund Direct Growth
+HDFC Dynamic Term Fund Direct Plan Growth
+HDFC Medium Term Fund Direct Growth
+HDFC Medium to Long Term Fund Direct Growth
+HDFC Infrastructure Fund Direct Growth
+HDFC Corporate Bond Fund Direct Plan Growth
+HDFC Conservative Hybrid Fund Direct Growth
+HDFC Mid Cap Fund Direct Growth
+HDFC Equity Savings Direct Plan Growth
+HDFC Multi Asset Allocation Fund Direct Growth
+HDFC Aggressive Hybrid Fund Direct Plan Growth
+HDFC Short Term Fund Direct Plan Growth
+HDFC ELSS Tax Saver Fund Direct Plan Growth
+HDFC Large Cap Fund Direct Growth
+HDFC Credit Risk Fund Direct Growth
+HDFC Banking and PSU Debt Fund Direct Growth
+HDFC Arbitrage Fund Direct Growth
+HDFC Large & Mid Cap Fund Direct Growth
+HDFC Small Cap Fund Direct Growth
+HDFC Ultra Short Term Fund Direct Growth
+HDFC Liquid Direct Plan Growth
+HDFC Overnight Fund Direct Growth
+HDFC Money Market Fund Direct Growth
+HDFC Housing Opportunities Fund Direct Growth
+HDFC Banking & Financial Services Fund Direct Growth
+HDFC Multi Cap Fund Direct Growth
+HDFC Business Cycle Fund Direct Growth
+HDFC Long Term Fund Direct Growth
+HDFC MNC Fund Direct Growth
+HDFC Defence Fund Direct Growth
+HDFC Consumption Fund Direct Growth
+HDFC Transportation and Logistics Fund Direct Growth
+HDFC Technology Fund Direct Growth
+HDFC Pharma And Healthcare Fund Direct Growth
+HDFC Manufacturing Fund Direct Growth
+HDFC Children's Fund Direct Plan
+HDFC Innovation Fund Direct Growth
+About
+HDFC ELSS Tax Saver Fund Direct Plan Growth
+HDFC ELSS Tax Saver Fund Direct Plan Growth is a Equity Mutual Fund Scheme launched by HDFC Mutual Fund. This scheme was made available to investors on 10 Dec 1999. Amar Kalkundrikar is the Current Fund Manager of HDFC ELSS Tax Saver Fund Direct Plan Growth fund. The fund currently has an Asset Under Management(AUM) of ₹9,86,237 Cr and the Latest NAV as of 28 Sep 2026 is ₹1,426.93.
+The HDFC ELSS Tax Saver Fund Direct Plan Growth is rated Very High risk. Minimum SIP Investment is set to ₹500. Minimum Lumpsum Investment is ₹500.
+;
+Investment Objective
+The scheme seeks to generate capital appreciation / income from a portfolio, comprising predominantly of equity & equity related instruments.
+Fund benchmark
+NIFTY 500 Total Return Index
+Scheme Information Document(SID)
+Fund house
+HDFC Mutual Fund
+Rank (total assets)
+#2 in India
+Total AUM
+₹9,86,236.84 Cr
+Date of Incorporation
+10 Dec 1999
+Phone
+022 – 66316333
+E-mail
+[email protected]
+Website
+http://www.hdfcfund.com
+Launch Date
+10 Dec 1999
+Address
+"HDFC House", 2nd Floor, H. T. Parekh Marg, 165-166, BackbayReclamation, Churchgate Mumbai 400020
+Custodian
+Deutsche Bank
+Registrar & Transfer Agent
+Cams
+Email
+[email protected]
+Website
+www.camsonline.com
+Address
+7th Floor, Tower II, Rayala Towers, 158, Anna Salai,
+Home
+>
+Mutual Funds
+>
+HDFC Mutual Fund
+>
+HDFC ELSS Tax Saver Fund Direct Plan Growth
+Vaishnavi Tech Park, South Tower, 3rd Floor
+Sarjapur Main Road, Bellandur, Bengaluru – 560103
+Karnataka
+Contact Us
+Download the App
+GROWW
+About Us
+Pricing
+Blog
+Media & Press
+Careers
+Help & Support
+Trust & Safety
+Investor Relations
+PRODUCTS
+Stocks
+F&O
+MTF
+ETF
+IPO
+Mutual Funds
+Commodities
+Groww Terminal
+915 Terminal
+Stock Screens
+Algo Trading
+Groww Charts
+Groww Digest
+Demat Account
+Groww AMC
+PMS
+Bonds
+Credit
+© 2016-
+2026
+Groww. All rights reserved.
+Version:
+8.0.4
+Share Market
+Indices
+F&O
+Mutual Funds
+ETFs
+Funds By Groww
+Calculators
+IPO
+Miscellaneous
+Top Gainers Stocks
+52 Weeks High Stocks
+Tata Motors
+NHPC
+ITC
+Wipro
+BSE
+NTPC
+Top Losers Stocks
+52 Weeks Low Stocks
+IREDA
+State Bank of India
+Adani Power
+CDSL
+Cochin Shipyard
+SJVN
+Most Traded Stocks
+Stocks Market Calender
+Tata Steel
+Tata Power
+Bharat Heavy Electricals
+Indian Oil Corporation
+HUDCO
+SAIL
+Stocks Feed
+Suzlon Energy
+Zomato (Eternal)
+Yes Bank
+Infosys
+NBCC
+IRCTC
+Share Market Live Update
+FII DII Activity
+IRFC
+Bharat Electronics
+HDFC Bank
+Vedanta
+Reliance Power
+Jaiprakash Po

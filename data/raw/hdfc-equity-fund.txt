@@ -1,0 +1,772 @@
+Scheme: HDFC Equity Fund
+
+Structured page data:
+
+amc_code: HDFCMutualFund_MF
+amc_name: HDFC MUTUAL FUND
+bse_scheme_code: 02T-GR
+scheme_name: HDFC FLEXICAP FUND - DIRECT PLAN - GROWTH OPTION
+scheme_type: EQUITY
+stp_in_minimum_installment_amount: 1000
+stp_out_minimum_installment_amount: 1000
+stp_minimum_installment_units: 9999999
+stp_minimum_installment_numbers: 6
+stp_minimum_gap: 0
+swp_minimum_installment_amount: 100
+swp_minimum_installment_units: 999999
+swp_minimum_installment_numbers: 6
+swp_minimum_gap: 0
+scheme_type: NORMAL
+sip_start_date_time: 2013-01-01T00:00:00
+sip_end_date_time: 2013-01-01T14:00:00
+scheme_type: NFO
+meta_desc: HDFC Flexi Cap Direct Plan Growth is Flexi Cap Equity mutual fund with risk-reward rating of 5/10. It has track record of 13 years, with three year return of 14.84. Risk is Very High
+scheme_code: 118955
+direct_scheme_code: 118955
+regular_search_id: hdfc-equity-fund-growth
+scheme_name: HDFC Flexi Cap Direct Plan Growth
+search_id: hdfc-equity-fund-direct-growth
+min_investment_amount: 100
+fund_house: HDFC Mutual Fund
+fund_manager: Prashant Jain
+mini_additional_investment: 100
+sip_multiplier: 1
+category: Equity
+rta_scheme_code: H02T
+exit_load: Exit load of 1% if redeemed within 1 year
+sub_category: Flexi Cap
+description: The scheme seeks to generate capital appreciation / income from a portfolio, predominantly invested in equity & equity related instruments.
+benchmark: NIFTY 500 TRI
+benchmark_name: NIFTY 500 Total Return Index
+aum: 113606.46602051
+expense_ratio: 0.77
+base_expense_ratio: 0.57
+super_category: HDFC Flexi Cap Direct Plan-Growth
+min_sip_investment: 100
+max_sip_investment: 999999999
+min_withdrawal: 100
+analysis_desc: Consistently lower annualised returns than category average for the past 1Y and 3Y
+analysis_subject: expense_analysis
+analysis_desc: Lower expense ratio: 0.77%
+analysis_desc: 5Y and 10Y annualised returns higher than category average
+analysis_desc: Higher alpha: 5.85 
+The fund has generated returns higher than benchmark - NIFTY 500 Total Return Index - in the last 3Y
+analysis_subject: base_expense_analysis
+analysis_desc: Lower base expense ratio: 0.57%
+amc_info name: HDFC Mutual Fund
+aum: 986236.84494707
+email: shareholders.relations@hdfcfund.com
+description: HDFC Mutual Fund started their mutual fund on 30/06/2000 and its managing total assets of ₹2,70,046 Cr. Its ranked at 2 as per total assets at end of 30th Sep 2017.
+vro_website: http://www.hdfcfund.com
+category_helper_text: Invests in stocks as per Contrarian investment strategy
+tax_impact: If you redeem within one year, returns are taxed at 20%. If you redeem after one year, returns exceeding Rs 1.25 lakh in a financial year are taxed at 12.5%.
+description: Contra funds follow Contrarian strategy which means investing in stocks in contrast to the prevailing sentiment. Minimum investment in equity is 65%.
+stats type: FUND_RETURN
+stats title: Fund Returns
+stats type: CATEGORY_AVG_RETURN
+stats title: Category Average
+stats type: RANK_WITHIN_CATEGORY
+stats title: Rank Within Category
+sharpe_ratio: 0.89
+sortino_ratio: 1.04
+information_ratio: 1.03
+nav: 2181.069
+nav_date: 28-Sep-2026
+scheme_type: Growth
+experience: Prior to joining the HDFC AMC, he has worked with Invesco Asset Management (India) Pvt. Ltd, HDFC Mutual Fund, DBS Cholamandalam AMC Pvt. Ltd. and Fidelity.
+scheme_name: HDFC Focused Fund Direct Growth
+scheme_code: 118950
+search_id: hdfc-focused-fund-direct-growth
+sid_url: https://www.hdfcfund.com
+amc_page_url: https://groww.in/mutual-funds/amc/hdfc-mutual-funds
+groww_scheme_code: INF179K01UT0
+fund_name: HDFC Flexi Cap Direct Plan-Growth
+search_id: bank-of-india-flexi-cap-fund-direct-growth
+aum: 2952.9962
+min_investment: 5000
+super_category: Bank of India Flexi Cap Fund
+scheme_name: Bank of India Flexi Cap Fund Direct Growth
+fund_manager: Alok Singh
+fund_house: Bank of India Mutual Fund
+scheme_code: 148404
+direct_scheme_code: 148404
+min_sip_investment: 1000
+groww_scheme_code: INF761K01FF5
+expense_ratio: 0.85
+base_expense_ratio: 0.49
+fund_name: Bank of India Flexi Cap Fund
+search_id: iti-flexi-cap-fund-direct-growth
+aum: 1588.12610608
+super_category: ITI Flexi Cap Fund
+scheme_name: ITI Flexi Cap Fund Direct Growth
+fund_manager: Dhimant Shah
+fund_house: ITI Mutual Fund
+scheme_code: 151379
+direct_scheme_code: 151379
+min_sip_investment: 500
+groww_scheme_code: INF00XX01CO7
+expense_ratio: 0.91
+base_expense_ratio: 0.53
+fund_name: ITI Flexi Cap Fund
+search_id: hsbc-india-opportunities-fund-direct-growth
+aum: 5999.6677
+super_category: HSBC Flexi Cap Fund
+scheme_name: HSBC Flexi Cap Fund Direct Growth
+fund_manager: Neelotpal Sahai
+fund_house: HSBC Mutual Fund
+scheme_code: 120046
+direct_scheme_code: 120046
+regular_search_id: hsbc-india-opportunities-fund-growth
+groww_scheme_code: INF336L01DH5
+expense_ratio: 1.31
+base_expense_ratio: 0.91
+fund_name: HSBC Flexi Cap Fund
+min_investment: 100
+aum: 19384.81624869
+super_category: Franklin India Flexi Cap Fund
+scheme_name: Franklin India Flexi Cap Fund Direct Growth
+fund_manager: Anand Radhakrishnan, R Janakiraman, Srikesh Nair
+fund_house: Franklin Templeton Mutual Fund
+scheme_code: 118535
+direct_scheme_code: 118535
+regular_search_id: franklin-india-equity-fund-direct-growth
+groww_scheme_code: INF090I01FK3
+expense_ratio: 1.0
+base_expense_ratio: 0.76
+fund_name: Franklin India Flexi Cap Fund
+page: /mutual-funds/[searchId]
+searchId: hdfc-equity-fund-direct-growth
+
+Visible page text:
+
+HDFC Flexi Cap Direct Plan Growth - NAV, Mutual Fund Performance & Portfolio
+Stocks
+Invest in Stocks
+Invest in stocks, ETFs, IPOs with fast orders. Track returns on your stock holdings and view real-time P&L on your positions.
+Intraday
+Monitor top intraday performers in real time
+ETF Screener
+Get the best of Mutual Funds and flexibility of Stocks
+IPO
+Track upcoming and ongoing IPOs
+MTFs
+Buy now, pay later
+Stock Screener
+Filter based on RSI, PE ratio and more
+Stock Events
+Dividends, bonus, buybacks and more
+Demat Account
+Begin your stock market journey
+Share Market Today
+Live news updates from stock market
+F&O
+Trade in Futures & Options
+Trade in F&O using the terminal. View charts, indicators, track your orders , P&L and watchlists in a single space
+Indices
+Track markets across the globe
+Terminal
+Track charts, orders, positions, watchlists in one place
+Option chain
+Analyse chains, view payoffs, create baskets
+Pledge
+Get extra balance for trading
+Commodities
+Trade in Crude Oil, Gold, Silver and more
+API trading
+Set up and execute trades through our API
+Mutual Funds
+Invest in Mutual Funds
+Invest in direct mutual funds at zero charges via lump sump investments or SIPs
+Mutual Fund Houses
+Know about AMCs, funds, fund managers
+NFO’s
+Track all active NFOs in one place
+Mutual Funds by Groww
+Mutual funds by Groww designed for your investment goals
+Start SIP
+Build long-term wealth through disciplined monthly investing.
+Mutual Funds screener
+Filter funds based on risk, fund size and more
+Track Funds
+Import funds and track all investments in a single place
+Compare Funds
+More
+SIP calculator
+Estimate returns on a SIP
+Brokerage calculator
+Estimate charges for your trade/investment
+Margin calculator
+Estimate balance needed to buy/sell a stock
+SWP calculator
+Returns on your systematic withdrawal plan
+Pricing
+Brokerage and charges on Groww
+Blog
+Credit
+Loan against securities and Personal loan
++14.84
+%
+3Y annualised
+-1.51
+%
+1D
+1M
+6M
+1Y
+3Y
+5Y
+All
+NAV: 28 Sep '26
+₹2,181.07
+Min. for SIP
+₹100
+Fund size (AUM)
+₹1,13,606.46 Cr
+Expense ratio
+0.77%
+Rating
+5
+Return calculator
+Monthly SIP
+One time
+Monthly investment
+₹5,000
+Over the past
+Total investment
+Would've become
+Historic returns
+Returns
+1 year
+₹60,000
+₹59,223
+-1.29
+%
+3 years
+₹1,80,000
+₹1,97,775
++
+9.88
+%
+5 years
+₹3,00,000
+₹4,19,540
++
+39.85
+%
+10 years
+₹6,00,000
+₹14,16,431
++
+136.07
+%
+Holdings (
+86
+)
+Name
+Sector
+Instruments
+Assets
+ICICI Bank Ltd
+Financial
+Equity
+9.19%
+Axis Bank Ltd
+Financial
+Equity
+6.19%
+HDFC Bank Ltd
+Financial
+Equity
+5.71%
+State Bank of India
+Financial
+Equity
+4.16%
+Zomato Ltd
+Technology
+Equity
+3.39%
+Kotak Mahindra Bank Ltd
+Financial
+Equity
+3.27%
+SBI Life Insurance Company Ltd
+Financial
+Equity
+3.19%
+Larsen & Toubro Ltd
+Industrials
+Equity
+3.16%
+Interglobe Aviation Ltd
+Industrials
+Equity
+2.98%
+Maruti Suzuki India Ltd
+Consumer Discretionary
+Equity
+2.74%
+Bharti Airtel Ltd
+Technology
+Equity
+2.58%
+Repo
+Unspecified
+Repo
+2.55%
+HCL Technologies Ltd
+Technology
+Equity
+2.48%
+Cipla Ltd
+Healthcare
+Equity
+2.47%
+Eicher Motors Ltd
+Consumer Discretionary
+Equity
+2.44%
+Power Grid Corporation of India Ltd
+Energy & Utilities
+Equity
+2.04%
+Hyundai Motor India Ltd.
+Consumer Discretionary
+Equity
+1.75%
+Nexus Select Trust
+Industrials
+Real Estate Investment Trusts
+1.62%
+Divi's Laboratories Ltd
+Healthcare
+Equity
+1.58%
+PB Fintech Ltd
+Financial
+Equity
+1.52%
+Max Healthcare Institute Ltd
+Healthcare
+Equity
+1.49%
+JSW Steel Ltd
+Materials
+Equity
+1.45%
+Piramal Pharma Ltd
+Healthcare
+Equity
+1.44%
+Reliance Industries Ltd
+Energy & Utilities
+Equity
+1.44%
+Bosch Ltd
+Consumer Discretionary
+Equity
+1.34%
+Persistent Systems Ltd
+Technology
+Equity
+1.34%
+Lupin Ltd
+Healthcare
+Equity
+0.94%
+Varroc Engineering Ltd
+Consumer Discretionary
+Equity
+0.88%
+Tata Steel Ltd
+Materials
+Equity
+0.88%
+Ultratech Cement Ltd
+Materials
+Equity
+0.87%
+TVS Motor Company Ltd
+Consumer Discretionary
+Equity
+0.85%
+Aster DM Healthcare Ltd
+Healthcare
+Equity
+0.81%
+United Spirits Ltd
+Consumer Staples
+Equity
+0.75%
+FSN E-Commerce Ventures Ltd
+Consumer Discretionary
+Equity
+0.75%
+Dr. Lal Pathlabs Ltd
+Healthcare
+Equity
+0.71%
+Lenskart Solutions Ltd.
+Consumer Discretionary
+Equity
+0.70%
+Britannia Industries Ltd
+Consumer Staples
+Equity
+0.70%
+Apollo Hospitals Enterprise Ltd
+Healthcare
+Equity
+0.68%
+Bharat Electronics Ltd
+Industrials
+Equity
+0.62%
+Anthem Biosciences Ltd.
+Healthcare
+Equity
+0.61%
+ACME Solar Holdings Ltd.
+Energy & Utilities
+Equity
+0.57%
+Vishal Mega Mart Ltd.
+Consumer Staples
+Equity
+0.57%
+Embassy Office Parks REIT
+Real Estate
+Real Estate Investment Trusts
+0.57%
+Kalpataru Power Transmission Ltd
+Industrials
+Equity
+0.56%
+Craftsman Automation Ltd
+Consumer Discretionary
+Equity
+0.56%
+JSW Infrastructure Ltd
+Industrials
+Equity
+0.55%
+Havells India Ltd
+Consumer Discretionary
+Equity
+0.54%
+Infosys Ltd
+Technology
+Equity
+0.54%
+Neuland Laboratories Ltd
+Healthcare
+Equity
+0.52%
+Adani Enterprises Ltd
+Materials
+Equity
+0.51%
+NUVOCO Vistas Corp Ltd
+Materials
+Equity
+0.49%
+Prestige Estates Projects Ltd
+Real Estate
+Equity
+0.48%
+HEXAWARE TECHNOLOGIES LIMITED EQ NEW FV RS.2/-
+Technology
+Equity
+0.48%
+Bajaj Auto Ltd
+Consumer Discretionary
+Equity
+0.46%
+Ashok Leyland Ltd
+Industrials
+Equity
+0.46%
+ICICI Prudential Asset Management Company Ltd.
+Financial
+Equity
+0.46%
+BSE Ltd
+Financial
+Equity
+0.45%
+CORONA Remedies Ltd.
+Healthcare
+Equity
+0.42%
+Sapphire Foods India Ltd
+Consumer Discretionary
+Equity
+0.41%
+Nippon Life India Asset Management Ltd
+Financial
+Equity
+0.38%
+SBI Funds Management Ltd
+Financial
+Equity
+0.38%
+Mahindra CIE Automotive Ltd
+Consumer Discretionary
+Equity
+0.34%
+Metropolis Healthcare Ltd
+Healthcare
+Equity
+0.33%
+Escorts Kubota Ltd
+Industrials
+Equity
+0.32%
+Dixon Technologies (India) Ltd
+Consumer Discretionary
+Equity
+0.32%
+The Ramco Cements Ltd
+Materials
+Equity
+0.31%
+Crompton Greaves Consumer Electricals Ltd
+Consumer Discretionary
+Equity
+0.30%
+Restaurant Brands Asia Ltd
+Consumer Discretionary
+Equity
+0.29%
+Life Insurance Corporation of India
+Financial
+Equity
+0.29%
+Swiggy Ltd.
+Technology
+Equity
+0.27%
+Biocon Ltd
+Healthcare
+Equity
+0.26%
+Apar Industries Ltd
+Diversified
+Equity
+0.26%
+Oil & Natural Gas Corporation Ltd
+Energy & Utilities
+Equity
+0.26%
+GOVERNMENT OF INDIA 31719 GOI 20JU27 7.38 FV RS 100
+Entities
+GOI Securities
+0.26%
+JK Lakshmi Cement Ltd
+Materials
+Equity
+0.23%
+Ather Energy Ltd.
+Consumer Discretionary
+Equity
+0.23%
+Hindustan Petroleum Corporation Ltd
+Energy & Utilities
+Equity
+0.23%
+Rubicon Research Ltd.
+Healthcare
+Equity
+0.21%
+Diamond Power Infrastructure Ltd
+Industrials
+Equity
+0.21%
+ABB India Ltd
+Industrials
+Equity
+0.12%
+Tenneco Clean Air India Ltd.
+Consumer Discretionary
+Equity
+0.10%
+GOVERNMENT OF INDIA 33618 GOI 13NV30 7.32 FV RS 100
+Entities
+GOI Securities
+0.10%
+7.37% GOI CG 23-10-2028
+Entities
+GOI Securities
+0.09%
+Bank Of Baroda
+Financial
+Equity
+0.08%
+Dixon Technologies (India) Limited
+Consumer Discretionary
+Futures
+0.03%
+Net Payables
+Unspecified
+Net Payables
+-0.08%
+See All
+Minimum investments
+Min. for 1st investment
+₹100
+Min. for 2nd investment
+₹100
+Min. for SIP
+₹100
+Understand terms
+Annualised returns
+Average of the yearly returns of a mutual fund over a given period.
+Absolute returns
+The total return of a mutual fund over a given period.
+Returns and rankings
+Annualised returns
+Absolute returns
+Name
+3Y
+5Y
+10Y
+All
+Fund returns
++14.8%
++16.0%
++15.4%
++15.6%
+Category average (
+Equity Flexi Cap
+)
++12.2%
++10.7%
++13.3%
++14.2%
+Rank (
+Equity Flexi Cap
+)
+11
+3
+2
+--
+Understand terms
+Expense ratio
+A fee payable to a mutual fund house for managing your mutual fund investments.     It is the total percentage of a company's fund assets used for administrative, management, advertising, and other expenses.
+Tax
+A percentage of your capital gains payable to the government upon exiting your mutual fund investments.     Taxation is categorized as long-term capital gains (LTCG) and short-term capital gains (STCG) depending on your holding period and the type of fund.
+Exit load
+A fee payable to a mutual fund house for exiting a fund (fully or partially) before the completion of a specified period from the date of investment.
+Stamp duty
+A form of tax payable for the purchase or sale of an asset or security.
+Exit Load
+01 Jan 2013
+Exit load of 1% if redeemed within 1 year
+Exit load, stamp duty and tax
+Exit load
+Exit load of 1% if redeemed within 1 year
+Stamp duty on investment:
+0.005% (from July 1st, 2020)
+from July 1st 2020
+Tax implication
+If you redeem within one year, returns are taxed at 20%. If you redeem after one year, returns exceeding Rs 1.25 lakh in a financial year are taxed at 12.5%.
+Check past data
+Compare similar funds
+Name
+1Y
+3Y
+Fund Size(Cr)
+Bank of India Flexi Cap Fund Direct Growth
++11.56%
++18.54%
+2,952.99
+ITI Flexi Cap Fund Direct Growth
++13.40%
++18.27%
+1,588.12
+HSBC Flexi Cap Fund Direct Growth
++6.32%
++14.86%
+5,999.66
+HDFC Flexi Cap Direct Plan Growth
+-0.78%
++14.84%
+1,13,606.46
+Franklin India Flexi Cap Fund Direct Growth
+-3.97%
++9.94%
+19,384.81
+Compare
+Fund management
+DM
+Dhruv Muchhal
+Jun 2023
+- Present
+View details
+Education
+Mr. Dhruv has done B.Com, CA and CFA
+Experience
+Prior to joining HDFC MF,he has worked with Motilal Oswal Financial Services Ltd., Goldman Sachs, CRISIL Global Research & Analytics and Deloitte Haskins & Sells
+Also manages these schemes
+HDFC Flexi Cap Direct Plan Growth
+HDFC Value Fund Direct Plan Growth
+HDFC Ultra Short to Short Term Fund Direct Growth
+HDFC Focused Fund Direct Growth
+HDFC Floating Interest Rates Fund Direct Plan Growth
+HDFC Balanced Advantage Fund Direct Growth
+HDFC Dynamic Term Fund Direct Plan Growth
+HDFC Medium Term Fund Direct Growth
+HDFC Medium to Long Term Fund Direct Growth
+HDFC Infrastructure Fund Direct Growth
+HDFC Corporate Bond Fund Direct Plan Growth
+HDFC Conservative Hybrid Fund Direct Growth
+HDFC Mid Cap Fund Direct Growth
+HDFC Equity Savings Direct Plan Growth
+HDFC Multi Asset Allocation Fund Direct Growth
+HDFC Aggressive Hybrid Fund Direct Plan Growth
+HDFC Short Term Fund Direct Plan Growth
+HDFC ELSS Tax Saver Fund Direct Plan Growth
+HDFC Large Cap Fund Direct Growth
+HDFC Credit Risk Fund Direct Growth
+HDFC Banking and PSU Debt Fund Direct Growth
+HDFC Arbitrage Fund Direct Growth
+HDFC Large & Mid Cap Fund Direct Growth
+HDFC Small Cap Fund Direct Growth
+HDFC Ultra Short Term Fund Direct Growth
+HDFC Liquid Direct Plan Growth
+HDFC Overnight Fund Direct Growth
+HDFC Money Market Fund Direct Growth
+HDFC Housing Opportunities Fund Direct Growth
+HDFC Banking & Financial Services Fund Direct Growth
+HDFC Multi Cap Fund Direct Growth
+HDFC Business Cycle Fund Direct Growth
+HDFC Long Term Fund Direct Growth
+HDFC MNC Fund Direct Growth
+HDFC Defence Fund Direct Growth
+HDFC Consumption Fund Direct Growth
+HDFC Transportation and Logistics Fund Direct Growth
+HDFC Technology Fund Direct Growth
+HDFC Pharma And Healthcare Fund Direct Growth
+HDFC Manufacturing Fund Direct Growth
+HDFC Children's Fund Direct Plan
+HDFC Innovation Fund Direct Growth
+AG
+Amit Ganatra
+Feb 2026
+- Present
+View details
+Education
+Mr. Ganatra holds a Commerce degree and is a Charted Accountant. He is also a Chartered Financial Analyst from AIMR.
+Experience
+Prior to joining the HDFC AMC, he has worked with Invesco Asset Management (India) Pvt. Ltd, HDFC Mutual Fund, DBS Cholamandalam AMC Pvt. Ltd. and Fidelity.
+Also manages these schemes
+HDFC Flexi Cap Direct Plan Growth
+HDFC Focused Fund Direct Growth
+About
+HDFC Flexi Cap Direct Plan Growth
+HDFC Flexi Cap Direct Plan Growth is a Equity Mutual Fund Scheme launched by HDFC Mutual Fund. This scheme was made available to investors on 10 Dec 1999. Dhruv Muchhal is the Current Fund Manager of HDFC Flexi Cap Direct Plan Growth fund. The fund currently has an Asset Under Management(AUM) of ₹9,86,237 Cr and the Latest NAV as of 28 Sep 2026 is ₹2,181.07.
+The HDFC Flexi Cap Direct Plan Growth is rated Very High risk. Minimum SIP Investment is set to ₹100. Minimum Lumpsum Investment is ₹100. Exit load of 1% if redeemed within 1 year
+;
+Investment Objective
+The scheme seeks to generate capital appreciation / income from a portfolio, predominantly invested in equity & equity related instruments.
+Fund
