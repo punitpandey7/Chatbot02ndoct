@@ -158,6 +158,110 @@ empty corpus — so the build does not depend on a third-party site being up.
   request. The first answer after waking is slower.
 - Every rebuild re-runs Stage A, so the corpus date reflects that build.
 
+## Disclaimer
+
+> **Facts-only. No investment advice.**
+>
+> This assistant answers *scheme facts only* — expense ratios, exit loads, lock-in
+> periods, minimum SIP, benchmark, riskometer level. It does **not** recommend or
+> compare funds, predict returns, or give tax advice, and it does **not** accept or
+> store personal data such as PAN, Aadhaar, account numbers or OTPs.
+>
+> Every factual answer is grounded in a public source page listed below and carries
+> the date that page was ingested. Facts go stale — verify against the official
+> HDFC Mutual Fund / AMFI documents before acting on anything.
+>
+> Not a SEBI-registered investment adviser. Mutual fund investments are subject to
+> market risk; read the scheme information document before investing.
+
+## Sources
+
+All seven pages are public and were ingested on **2026-09-29**. The machine-readable
+list lives in [`data/sources.csv`](data/sources.csv).
+
+| # | Scheme | Type | URL |
+|---|--------|------|-----|
+| 1 | HDFC Large Cap Fund (Direct Growth) | scheme page | [groww.in](https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth) |
+| 2 | HDFC Equity Fund / Flexi Cap (Direct Growth) | scheme page | [groww.in](https://groww.in/mutual-funds/hdfc-equity-fund-direct-growth) |
+| 3 | HDFC ELSS Tax Saver Fund (Direct Growth) | scheme page | [groww.in](https://groww.in/mutual-funds/hdfc-elss-tax-saver-fund-direct-plan-growth) |
+| 4 | HDFC Small Cap Fund (Direct Growth) | scheme page | [groww.in](https://groww.in/mutual-funds/hdfc-small-cap-fund-direct-growth) |
+| 5 | HDFC Balanced Advantage Fund (Direct Growth) | scheme page | [groww.in](https://groww.in/mutual-funds/hdfc-balanced-advantage-fund-direct-growth) |
+| 6 | — (process) | help / how-to | [groww.in/help](https://groww.in/help) |
+| 7 | — (process) | investor education | [amfiindia.com](https://www.amfiindia.com/mutual-fund) |
+
+Saved page text is in [`data/raw/`](data/raw). All chunks (239) are dumped
+human-readably to [`data/chunks.txt`](data/chunks.txt), and every 384-d vector to
+[`data/embeddings.txt`](data/embeddings.txt).
+
+## Sample Q&A
+
+These are **real outputs**, produced by running `python -m src.pipeline "<question>"`
+against the live Groq model on the ingested corpus — not hand-written.
+
+### Factual questions (answered from the corpus)
+
+**1. Expense ratio of HDFC Large Cap Fund Direct Growth?**
+> `0.84%`
+> Source: [groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth](https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth) · Last updated from sources: 2026-09-29
+
+**2. Exit load of HDFC Small Cap Fund Direct Growth?**
+> `Exit load of 1% if redeemed within 1 year`
+> Source: [groww.in/mutual-funds/hdfc-small-cap-fund-direct-growth](https://groww.in/mutual-funds/hdfc-small-cap-fund-direct-growth) · Last updated: 2026-09-29
+
+**3. Minimum SIP for HDFC Flexi Cap / Equity Fund Direct Growth?**
+> `The minimum SIP investment is ₹100.`
+> Source: [groww.in/mutual-funds/hdfc-equity-fund-direct-growth](https://groww.in/mutual-funds/hdfc-equity-fund-direct-growth) · Last updated: 2026-09-29
+
+**4. Lock-in period for HDFC ELSS Tax Saver?**
+> `3 years`
+> Source: [groww.in/mutual-funds/hdfc-elss-tax-saver-fund-direct-plan-growth](https://groww.in/mutual-funds/hdfc-elss-tax-saver-fund-direct-plan-growth) · Last updated: 2026-09-29
+
+**5. Riskometer / risk level of HDFC Balanced Advantage Fund?**
+> `Moderately High Riskometer`
+> Source: [groww.in/mutual-funds/hdfc-balanced-advantage-fund-direct-growth](https://groww.in/mutual-funds/hdfc-balanced-advantage-fund-direct-growth) · Last updated: 2026-09-29
+
+**6. Benchmark of HDFC Large Cap Fund?**
+> `NIFTY 100 Total Return Index`
+> Source: [groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth](https://groww.in/mutual-funds/hdfc-large-cap-fund-direct-growth) · Last updated: 2026-09-29
+
+### Out-of-corpus (abstains instead of guessing)
+
+**7. How to download capital-gains / account statement?**
+> `This fact is not in the loaded sources.`
+> Source: none — nothing in the corpus supports this.
+
+This is the **correct** behaviour, not a failure. The string `statement` appears
+**zero times** across all seven ingested pages, so there is nothing to ground an
+answer in. The contract (architecture §7, PRD F7) prefers abstaining over inventing,
+so it refuses. Fixing it properly means adding a source that actually documents
+statement downloads — e.g. a Groww help-centre article on account statements — then
+re-running ingest.
+
+### Refusals (guardrails run before retrieval)
+
+**8. Should I buy HDFC Small Cap now?** → *refused: advice*
+> `Facts-only. This assistant cannot say whether you should buy, sell, or switch a fund. Read official scheme documents and unbiased investor education instead.`
+> Educational link: [amfiindia.com/mutual-fund](https://www.amfiindia.com/mutual-fund) — **no retrieval performed**
+
+**9. Which of these five funds has the best 3-year return?** → *refused: returns*
+> `This assistant does not compute or compare returns. Use the official factsheet for past performance figures.`
+> Educational link: [amfiindia.com/mutual-fund](https://www.amfiindia.com/mutual-fund) — **no retrieval performed**
+
+**10. My PAN is ABCDE1234F, what's my tax?** → *refused: PII*
+> `This assistant does not accept or store personal identifiers (PAN, Aadhaar, account numbers, OTPs, email, or phone). Ask a scheme fact without personal data.`
+> Educational link: [amfiindia.com/mutual-fund](https://www.amfiindia.com/mutual-fund) — **no retrieval performed**
+
+Note the refusals carry **no date stamp**. A refusal is not grounded in a dated
+corpus fact, so printing one would be misleading.
+
+### Acceptance summary
+
+| Bar (PRD §13) | Result |
+|---|---|
+| Factual items cite a real corpus URL | 6/6 ✅ |
+| Refusal items recommend no product | 3/3 ✅ |
+| No fabricated ratios | ✅ (1 abstention instead) |
+
 ## Known limits
 
 Numbers go stale after the last ingest. MiniLM can miss paraphrases. The LLM must not invent ratios or URLs. See `prd.md` and `architecture.md`.

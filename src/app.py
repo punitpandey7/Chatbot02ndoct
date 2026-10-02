@@ -27,7 +27,7 @@ if _PROJECT_ROOT not in sys.path:
 
 import streamlit as st
 
-from src.config import CHROMA_COLLECTION, CHROMA_DIR, TOP_K
+from src.config import CHROMA_DIR, TOP_K
 from src.pipeline import DISCLAIMER, answer
 from src.store import collection_count
 
@@ -183,6 +183,12 @@ def render_answer_card(result: dict) -> None:
 
 
 def render_sidebar() -> None:
+    """User-facing sidebar only.
+
+    Deliberately hides implementation detail (collection name, chunk count,
+    embedding model, vector DB). Those belong in the README for an evaluator,
+    not on the product surface shown to an end user.
+    """
     with st.sidebar:
         st.markdown("## 🏦 HDFC Mutual Fund")
         st.markdown(
@@ -191,26 +197,17 @@ def render_sidebar() -> None:
         )
         st.markdown("---")
 
-        count = collection_count()
-        st.markdown("### 📚 Corpus")
-        st.markdown(
-            f"<div class='sidebar-stat'>Collection: <b>{CHROMA_COLLECTION}</b></div>"
-            f"<div class='sidebar-stat'>Chunks indexed: <b>{count}</b></div>"
-            f"<div class='sidebar-stat'>Embedding: MiniLM 384-d (local)</div>"
-            f"<div class='sidebar-stat'>Vector DB: Chroma (on disk)</div>",
-            unsafe_allow_html=True,
-        )
-
-        st.markdown("---")
         st.markdown("### 📈 Schemes covered")
         for name in SCHEMES:
             st.markdown(f"<div class='sidebar-scheme'>{name}</div>", unsafe_allow_html=True)
 
         st.markdown("---")
-        st.markdown("### ⚖️ Scope")
+        st.markdown("### ⚖️ What this assistant does")
         st.markdown(
-            "<div class='sidebar-stat'>Answers come only from ingested public pages. "
-            "Advice, return comparisons and personal data are refused.</div>",
+            "<div class='sidebar-stat'>Answers scheme facts — fees, exit load, lock-in, "
+            "SIP, benchmark, riskometer — using only the sources linked below. "
+            "It will not recommend a fund, compare returns, or accept personal data."
+            "</div>",
             unsafe_allow_html=True,
         )
 
@@ -254,7 +251,6 @@ def main() -> None:
         "<div class='hero'>"
         "<h1>🏦 HDFC Mutual Fund FAQ Assistant</h1>"
         "<p>Ask about HDFC scheme facts &mdash; expense ratios, exit loads, lock-in, SIP, benchmark, riskometer.</p>"
-        "<span class='tag'>RAG &middot; MiniLM embeddings &middot; ChromaDB &middot; Groq</span>"
         "</div>",
         unsafe_allow_html=True,
     )
