@@ -36,14 +36,34 @@ def scheme_filter(question: str) -> dict[str, str] | None:
 
 
 def retrieve(question: str, k: int = TOP_K) -> list[dict[str, Any]]:
+    import time
+
+    t_all = time.perf_counter()
+
+    t0 = time.perf_counter()
     if not collection_exists_and_populated():
         raise SystemExit(
             "Chroma is empty. Run: python -m src.ingest   "
             "(vectors persist under data/chroma/)."
         )
+    t_open = time.perf_counter() - t0
+
+    t0 = time.perf_counter()
     vectors = embed_texts([question])
+    t_embed = time.perf_counter() - t0
+
     where = scheme_filter(question)
+    t0 = time.perf_counter()
     raw = query_embedding(vectors[0], k=k, where=where)
+    t_query = time.perf_counter() - t0
+
+    # Timing only. On a slow host the split between these is the only way to
+    # tell a slow vector store from a slow model or a slow first read.
+    print(
+        f"[retrieve] open {t_open:.2f}s | embed {t_embed:.2f}s | "
+        f"query {t_query:.2f}s | total {time.perf_counter() - t_all:.2f}s",
+        flush=True,
+    )
     docs = (raw.get("documents") or [[]])[0]
     metas = (raw.get("metadatas") or [[]])[0]
     dists = (raw.get("distances") or [[]])[0]

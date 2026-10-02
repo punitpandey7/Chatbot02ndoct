@@ -170,14 +170,26 @@ def _create_completion(client, prompt: str, user_payload: str):
         "temperature": GROQ_TEMPERATURE,
         "max_tokens": GROQ_MAX_TOKENS,
     }
+    import time
+
+    t0 = time.perf_counter()
     try:
-        return client.chat.completions.create(
+        response = client.chat.completions.create(
             reasoning_effort=GROQ_REASONING_EFFORT, **kwargs
         )
     except GenerationError:
         raise
     except Exception:  # noqa: BLE001 — unsupported argument on this model
-        return client.chat.completions.create(**kwargs)
+        response = client.chat.completions.create(**kwargs)
+
+    # Timing only. The upstream call is the one step that can be slow purely
+    # because of the network, so it is worth separating from everything else.
+    print(
+        f"[generate] upstream call {time.perf_counter() - t0:.2f}s "
+        f"({model_name()})",
+        flush=True,
+    )
+    return response
 
 
 def _message_text(response) -> str:

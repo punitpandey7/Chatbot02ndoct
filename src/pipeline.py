@@ -42,10 +42,27 @@ def answer(question: str, k: int = TOP_K) -> dict[str, Any]:
             "retrieved_urls": [],
         }
 
+    import time
+
+    t_all = time.perf_counter()
     hits = retrieve(question, k=k)
+    t_retrieve = time.perf_counter() - t_all
+
     from src.generate import answer_from_chunks
 
+    t0 = time.perf_counter()
     result = answer_from_chunks(question, hits)
+    t_generate = time.perf_counter() - t0
+
+    # Timing only, printed to the server log. On a hosted container this is
+    # the only place the split is visible, and it decides whether a slow
+    # request is the vector store, the model, or the upstream API call.
+    print(
+        f"[pipeline] retrieve {t_retrieve:.2f}s | generate {t_generate:.2f}s | "
+        f"total {time.perf_counter() - t_all:.2f}s",
+        flush=True,
+    )
+
     result["refusal_kind"] = None
     return result
 
