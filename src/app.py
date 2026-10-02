@@ -13,6 +13,18 @@ It only opens the persisted Chroma database and calls pipeline.answer.
 
 from __future__ import annotations
 
+import sys
+from pathlib import Path
+
+# `streamlit run src/app.py` puts only this file's own directory
+# (<root>/src) on sys.path, not the project root, so `import src.config`
+# raises ModuleNotFoundError under every launcher except `python -m src.app`.
+# Prepending the project root makes the app launch identically via
+# `python -m src.app`, `streamlit run src/app.py`, and `streamlit run -m src.app`.
+_PROJECT_ROOT = str(Path(__file__).resolve().parent.parent)
+if _PROJECT_ROOT not in sys.path:
+    sys.path.insert(0, _PROJECT_ROOT)
+
 import streamlit as st
 
 from src.config import CHROMA_COLLECTION, CHROMA_DIR, TOP_K
