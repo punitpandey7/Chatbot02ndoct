@@ -228,12 +228,28 @@ def render_sidebar() -> None:
             st.rerun()
 
 
+_warm_error = None
+
+
 def _warm() -> None:
-    """Preload MiniLM. Failures are non-fatal: the question path retries."""
+    """Preload MiniLM so the first question does not pay the load cost.
+
+    The failure is recorded rather than discarded. On a small host the load can
+    fail outright (commonly a memory limit), and an earlier version swallowed
+    that error, which made the resulting hang impossible to diagnose from the
+    deploy logs.
+    """
+    global _warm_error
     try:
         get_model()
-    except Exception:  # noqa: BLE001 — warm-up must never break the page
-        pass
+    except Exception as exc:  # noqa: BLE001 — never break the page render
+        _warm_error = f"{type(exc).__name__}: {exc}"
+        print(f"[app] warm-up FAILED -> {_warm_error}", flush=True)
+        import traceback
+
+        traceback.print_exc()
+    else:
+        print("[app] warm-up complete", flush=True)
 
 
 _warm_thread = None
@@ -278,6 +294,15 @@ def handle(question: str) -> None:
                 result = answer(question, k=TOP_K)
         except GenerationError as exc:
             st.error(str(exc))
+            return
+        except Exception as exc:  # noqa: BLE001
+            # Without this the chat message simply never completes and the
+            # widget sits on a spinner that can no longer do anything.
+            print(f"[app] question failed: {type(exc).__name__}: {exc}", flush=True)
+            st.error(
+                "Something went wrong while preparing that answer. "
+                "Please try again in a moment."
+            )
             return
         st.session_state.messages.append({"role": "assistant", "result": result})
         render_answer_card(result)
